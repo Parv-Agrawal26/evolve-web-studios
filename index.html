@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolve Web Studios — Coming Soon</title>
+  <meta name="description" content="Evolve Web Studios — Modern websites for growing businesses.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { min-height: 100%; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #05070b;
+      color: #fff;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 170, 255, .16), transparent 68%);
+      filter: blur(20px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      pointer-events: none;
+    }
+
+    .page {
+      width: min(900px, 92vw);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 48px 20px;
+    }
+
+    .logo {
+      width: min(145px, 32vw);
+      height: auto;
+      margin: 0 auto 34px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid rgba(58, 178, 255, .35);
+      border-radius: 999px;
+      color: #70c9ff;
+      background: rgba(20, 100, 160, .08);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 9vw, 92px);
+      line-height: .95;
+      letter-spacing: -4px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      background: linear-gradient(100deg, #fff 20%, #9edfff 65%, #16bfff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .sub {
+      max-width: 570px;
+      margin: 0 auto 38px;
+      color: #9aa5b5;
+      font-size: clamp(16px, 2.5vw, 19px);
+      line-height: 1.7;
+    }
+
+    .line {
+      width: 70px;
+      height: 2px;
+      margin: 0 auto 28px;
+      background: linear-gradient(90deg, transparent, #16bfff, transparent);
+      box-shadow: 0 0 18px rgba(22, 191, 255, .5);
+    }
+
+    .footer {
+      color: #5e6877;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 35px 10px; }
+      .logo { margin-bottom: 28px; }
+      h1 { letter-spacing: -2px; }
+      .sub { margin-bottom: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img class="logo" src="logo.png" alt="Evolve Web Studios">
+    <div class="eyebrow">Website launching soon</div>
+    <h1>We’re <span>evolving.</span></h1>
+    <p class="sub">
+      Evolve Web Studios is building modern, high-performance websites
+      for businesses ready to grow online.
+    </p>
+    <div class="line"></div>
+    <p class="footer">EVOLVE WEB STUDIOS</p>
+  </main>
+</body>
+</html>
