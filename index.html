@@ -1,124 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evolve Web Studios — Coming Soon</title>
-  <meta name="description" content="Evolve Web Studios — Modern websites for growing businesses.">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { min-height: 100%; }
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #05070b;
-      color: #fff;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      overflow: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      width: 620px;
-      height: 620px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 170, 255, .16), transparent 68%);
-      filter: blur(20px);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -55%);
-      pointer-events: none;
-    }
-
-    .page {
-      width: min(900px, 92vw);
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      padding: 48px 20px;
-    }
-
-    .logo {
-      width: min(145px, 32vw);
-      height: auto;
-      margin: 0 auto 34px;
-      display: block;
-      object-fit: contain;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 8px 15px;
-      border: 1px solid rgba(58, 178, 255, .35);
-      border-radius: 999px;
-      color: #70c9ff;
-      background: rgba(20, 100, 160, .08);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 9vw, 92px);
-      line-height: .95;
-      letter-spacing: -4px;
-      font-weight: 800;
-      margin-bottom: 24px;
-    }
-
-    h1 span {
-      background: linear-gradient(100deg, #fff 20%, #9edfff 65%, #16bfff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .sub {
-      max-width: 570px;
-      margin: 0 auto 38px;
-      color: #9aa5b5;
-      font-size: clamp(16px, 2.5vw, 19px);
-      line-height: 1.7;
-    }
-
-    .line {
-      width: 70px;
-      height: 2px;
-      margin: 0 auto 28px;
-      background: linear-gradient(90deg, transparent, #16bfff, transparent);
-      box-shadow: 0 0 18px rgba(22, 191, 255, .5);
-    }
-
-    .footer {
-      color: #5e6877;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
-    @media (max-width: 600px) {
-      .page { padding: 35px 10px; }
-      .logo { margin-bottom: 28px; }
-      h1 { letter-spacing: -2px; }
-      .sub { margin-bottom: 32px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Evolve Web Studios</title>
+<meta name="description" content="Evolve Web Studios creates modern, fast websites for growing businesses.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:#05070b;color:#f5f8fc;font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 80% 15%,rgba(24,191,255,.12),transparent 30%),radial-gradient(circle at 15% 70%,rgba(30,100,255,.08),transparent 28%)}
+.wrap{width:min(1120px,92vw);margin:auto}a{color:inherit;text-decoration:none}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #18202a}
+.brand{font-weight:800;letter-spacing:3px;display:flex;gap:11px;align-items:center}.mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid #2d9ed0;border-radius:9px;color:#55d4ff}
+.links{display:flex;gap:30px;color:#9ca8b7;font-size:14px}.links a:hover{color:#fff}.navbtn{border:1px solid #28546b;padding:10px 17px;border-radius:8px;font-size:14px}
+.hero{text-align:center;min-height:620px;display:grid;place-items:center;padding:90px 0}
+.kicker{color:#55d4ff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:700;margin-bottom:24px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#18bfff;margin-right:8px;box-shadow:0 0 15px #18bfff}
+h1,h2{font-family:Arial,Helvetica,sans-serif;letter-spacing:-3px}h1{font-size:clamp(48px,8vw,86px);line-height:1.02}
+.grad{background:linear-gradient(100deg,#fff,#aee9ff,#18bfff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:25px auto;color:#94a0af;font-size:18px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:34px}.btn{padding:14px 23px;border-radius:8px;font-weight:700;font-size:14px;border:1px solid #25313d}.primary{background:#f4f7fa;color:#071019}.secondary:hover{background:#0b1520;border-color:#2b8db8}
+.section{padding:100px 0;border-top:1px solid #18202a}.head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:45px}
+h2{font-size:clamp(36px,5vw,58px);line-height:1.05}.head p{max-width:450px;color:#94a0af}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid #1a2430;background:#090d13;padding:30px;border-radius:14px;min-height:230px}.card:hover{border-color:#2a6e8b}.num{color:#55d4ff;font-size:11px;letter-spacing:2px;font-weight:700;margin-bottom:55px}.card h3{font-size:21px;margin-bottom:9px}.card p{color:#8996a6;font-size:14px}
+.work{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{border:1px solid #1a2430;border-radius:14px;overflow:hidden;background:#090d13}.visual{height:290px;padding:25px;display:flex;align-items:end;background:radial-gradient(circle at 75% 25%,rgba(24,191,255,.20),transparent 32%),linear-gradient(135deg,#111a24,#070a0e)}
+.mock{height:180px;width:100%;background:#f3f5f7;border-radius:7px;padding:18px;color:#17202b;box-shadow:0 20px 50px #0008}.bar{height:8px;width:28%;background:#17202b;border-radius:4px;margin-bottom:22px}.mock h3{font-size:24px;line-height:1.05;width:65%;margin-bottom:16px}.small{height:6px;width:45%;background:#aeb6bf;border-radius:3px}.info{padding:22px}.info h3{font-size:20px}.info p{color:#6f7b8b;font-size:12px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #1a2430}.step{padding:30px;min-height:205px;border-right:1px solid #1a2430}.step:last-child{border-right:0}.step h3{font-size:19px;margin-bottom:8px}.step p{color:#8996a6;font-size:14px}.step .num{margin-bottom:50px}
+.cta{text-align:center;padding:120px 0;border-top:1px solid #18202a}.cta p{color:#94a0af;max-width:520px;margin:18px auto}
+footer{padding:28px 0;border-top:1px solid #18202a;color:#687585;font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){.links{display:none}.grid,.work{grid-template-columns:1fr}.head{display:block}.head p{margin-top:18px}.process{grid-template-columns:1fr 1fr}.step{border-bottom:1px solid #1a2430}.step:nth-child(2){border-right:0}}
+@media(max-width:520px){.hero{padding:65px 0}.process{grid-template-columns:1fr}.step{border-right:0}.step:last-child{border-bottom:0}footer{display:block}footer span{display:block;margin-top:6px}}
+</style>
 </head>
 <body>
-  <main class="page">
-    <img class="logo" src="logo.png" alt="Evolve Web Studios">
-    <div class="eyebrow">Website launching soon</div>
-    <h1>We’re <span>evolving.</span></h1>
-    <p class="sub">
-      Evolve Web Studios is building modern, high-performance websites
-      for businesses ready to grow online.
-    </p>
-    <div class="line"></div>
-    <p class="footer">EVOLVE WEB STUDIOS</p>
-  </main>
+<div class="wrap">
+<nav><a class="brand" href="#"><span class="mark">E</span>EVOLVE</a><div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a></div><a class="navbtn" href="#contact">Start a project</a></nav>
+</div>
+<main>
+<section class="hero"><div class="wrap">
+<div class="kicker"><span class="dot"></span>Web Design & Development</div>
+<h1>Websites that move<br><span class="grad">businesses forward.</span></h1>
+<p>Modern, fast and conversion-focused websites for businesses ready to grow online.</p>
+<div class="actions"><a class="btn primary" href="#contact">Get a free preview</a><a class="btn secondary" href="#work">Explore our work</a></div>
+</div></section>
+<section class="section" id="services"><div class="wrap"><div class="head"><h2>Built to make<br>an impression.</h2><p>Clean design, thoughtful development and clear calls-to-action — everything your business needs to make a stronger first impression online.</p></div>
+<div class="grid">
+<div class="card"><div class="num">01 / DESIGN</div><h3>Modern interfaces</h3><p>Distinctive layouts designed around your brand and your customers.</p></div>
+<div class="card"><div class="num">02 / DEVELOPMENT</div><h3>Fast & responsive</h3><p>Polished websites that work smoothly across phones, tablets and desktops.</p></div>
+<div class="card"><div class="num">03 / CONVERSION</div><h3>Built for action</h3><p>Clear messaging and calls-to-action that make it easy for visitors to contact you.</p></div>
+</div></div></section>
+<section class="section" id="work"><div class="wrap"><div class="head"><h2>Selected<br>concepts.</h2><p>A glimpse of the digital experiences we create. More work is coming soon.</p></div>
+<div class="work">
+<div class="project"><div class="visual"><div class="mock"><div class="bar"></div><h3>Built to stand<br>above the rest.</h3><div class="small"></div></div></div><div class="info"><h3>Summit Roofing</h3><p>Local Business Website Concept · USA</p></div></div>
+<div class="project"><div class="visual"><div class="mock"><div class="bar"></div><h3>A better space<br>starts here.</h3><div class="small"></div></div></div><div class="info"><h3>Oak & Stone Interiors</h3><p>Service Business Website Concept · USA</p></div></div>
+</div></div></section>
+<section class="section" id="process"><div class="wrap"><div class="head"><h2>Simple process.<br>Serious results.</h2><p>No endless meetings or complicated process. We keep projects focused and moving.</p></div>
+<div class="process"><div class="step"><div class="num">01</div><h3>Discover</h3><p>Understand your business, goals and customers.</p></div><div class="step"><div class="num">02</div><h3>Design</h3><p>Create a focused visual direction for your website.</p></div><div class="step"><div class="num">03</div><h3>Build</h3><p>Turn the design into a responsive, polished website.</p></div><div class="step"><div class="num">04</div><h3>Launch</h3><p>Get your new website live and ready for customers.</p></div></div></div></section>
+<section class="cta" id="contact"><div class="wrap"><div class="kicker"><span class="dot"></span>Let's build something better</div><h2>Ready to evolve?</h2><p>Tell us about your business. We'll show you what a stronger online presence could look like.</p><div class="actions"><a class="btn primary" href="mailto:hello@evolvewebstudios.in">Start a conversation</a></div></div></section>
+</main>
+<div class="wrap"><footer><span>© 2026 Evolve Web Studios</span><span>evolvewebstudios.in</span></footer></div>
 </body>
 </html>
