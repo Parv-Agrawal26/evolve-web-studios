@@ -735,6 +735,211 @@
     .fade-up{opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}.fade-up.visible{opacity:1;transform:none}
     .links a.active{color:white}
 
+    /* =========================================
+       3D & IMMERSIVE UPGRADES
+    ========================================= */
+
+    /* 1. HERO — 3D perspective wrapper + animated mesh */
+    .hero{
+      perspective:1200px;
+      perspective-origin:50% 40%;
+      overflow:hidden;
+    }
+    /* animated geometric mesh — pure CSS shapes */
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      background:
+        repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(108,221,255,.028) 60px),
+        repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(108,221,255,.028) 60px);
+      transform-style:preserve-3d;
+      animation:meshDrift 18s linear infinite;
+    }
+    @keyframes meshDrift{
+      0%{background-position:0 0,0 0}
+      100%{background-position:0 120px,120px 0}
+    }
+    /* floating 3D ring — uses hero-orbit elements */
+    .hero-orbit{
+      animation:orbitSpin 14s linear infinite;
+      transform-style:preserve-3d;
+    }
+    .orbit-2{animation-duration:9s;animation-direction:reverse}
+    @keyframes orbitSpin{
+      0%{transform:rotate(-20deg) rotateY(0deg)}
+      100%{transform:rotate(-20deg) rotateY(360deg)}
+    }
+    /* hero-visual gets 3D preserve */
+    .hero-visual{
+      transform-style:preserve-3d;
+    }
+    /* hero card 3D lift on hover */
+    .hero-card{
+      transform-style:preserve-3d;
+      transition:transform .5s ease,box-shadow .5s ease;
+    }
+    .hero-card:hover{
+      transform:rotate(0deg) translateZ(24px) translateY(-8px) rotateX(3deg);
+      box-shadow:
+        0 50px 120px rgba(0,0,0,.75),
+        0 0 80px rgba(22,191,255,.12),
+        0 0 0 1px rgba(108,221,255,.25),
+        inset 0 1px rgba(255,255,255,.08);
+    }
+
+    /* 2. DIGITAL GRID FLOOR — perspective tilt behind hero */
+    .hero::before{
+      content:"";
+      position:absolute;
+      bottom:-10%;
+      left:-10%;
+      right:-10%;
+      height:55%;
+      z-index:0;
+      pointer-events:none;
+      background:
+        repeating-linear-gradient(90deg,rgba(22,191,255,.055) 0px,rgba(22,191,255,.055) 1px,transparent 1px,transparent 55px),
+        repeating-linear-gradient(0deg,rgba(22,191,255,.055) 0px,rgba(22,191,255,.055) 1px,transparent 1px,transparent 55px);
+      transform:perspective(600px) rotateX(55deg) scaleX(1.4);
+      transform-origin:50% 100%;
+      mask-image:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 100%);
+      -webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 100%);
+      animation:gridScroll 6s linear infinite;
+    }
+    @keyframes gridScroll{
+      0%{background-position:0 0,0 0}
+      100%{background-position:55px 0,0 55px}
+    }
+    /* keep hero content above grid */
+    .hero-grid{position:relative;z-index:2}
+
+    /* 3. 3D HOVER TILT — services, projects, testimonials, steps */
+    .service{
+      transform-style:preserve-3d;
+      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+      background:linear-gradient(145deg,rgba(13,20,30,.85),rgba(7,10,14,.9));
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border:1px solid rgba(108,221,255,.1);
+    }
+    .service:hover{
+      transform:translateZ(22px) rotateX(-6deg) rotateY(4deg) translateY(-6px);
+      border-color:rgba(0,242,254,.55);
+      box-shadow:
+        0 24px 60px rgba(0,0,0,.55),
+        0 0 30px rgba(0,242,254,.15),
+        0 0 60px rgba(108,221,255,.08),
+        inset 0 1px rgba(255,255,255,.07);
+    }
+    .project{
+      transform-style:preserve-3d;
+      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+      background:linear-gradient(145deg,rgba(10,16,24,.9),rgba(7,10,14,.95));
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+    .project:hover{
+      transform:translateZ(18px) rotateX(-4deg) rotateY(3deg) translateY(-6px);
+      border-color:rgba(0,242,254,.45);
+      box-shadow:
+        0 28px 70px rgba(0,0,0,.6),
+        0 0 35px rgba(0,242,254,.12),
+        0 0 70px rgba(108,221,255,.07);
+    }
+    .tcard{
+      transform-style:preserve-3d;
+      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+      background:linear-gradient(145deg,rgba(13,20,30,.8),rgba(8,12,18,.9));
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      border:1px solid rgba(255,255,255,.07);
+    }
+    .tcard:hover{
+      transform:translateZ(20px) rotateX(-5deg) rotateY(3deg) translateY(-5px);
+      border-color:rgba(108,221,255,.4);
+      box-shadow:
+        0 20px 55px rgba(0,0,0,.5),
+        0 0 28px rgba(0,242,254,.12),
+        inset 0 1px rgba(255,255,255,.06);
+    }
+    .step{
+      transition:transform .3s ease,box-shadow .3s ease,background .3s ease;
+      background:rgba(255,255,255,.012);
+    }
+    .step:hover{
+      transform:translateY(-5px) translateZ(12px);
+      background:rgba(22,191,255,.04);
+      box-shadow:0 16px 45px rgba(0,0,0,.4),0 0 22px rgba(0,242,254,.1);
+      z-index:2;
+      position:relative;
+    }
+
+    /* 4. GLASSMORPHISM — manifesto, modal, pricing, principle cards */
+    .manifesto{
+      background:linear-gradient(145deg,rgba(13,23,33,.75),rgba(8,12,18,.8));
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border:1px solid rgba(108,221,255,.18);
+      box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px rgba(255,255,255,.06);
+    }
+    .modal-box{
+      background:rgba(11,17,25,.82);
+      backdrop-filter:blur(22px);
+      -webkit-backdrop-filter:blur(22px);
+      border:1px solid rgba(108,221,255,.28);
+      box-shadow:0 40px 100px rgba(0,0,0,.7),0 0 60px rgba(22,191,255,.08);
+    }
+    .pricing-cta-inner{
+      background:linear-gradient(145deg,rgba(22,191,255,.07),rgba(10,14,22,.85));
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border:1px solid rgba(108,221,255,.32);
+      box-shadow:0 24px 70px rgba(0,0,0,.4),0 0 40px rgba(22,191,255,.06),inset 0 1px rgba(255,255,255,.05);
+      transition:box-shadow .3s ease,border-color .3s ease;
+    }
+    .pricing-cta-inner:hover{
+      border-color:rgba(108,221,255,.5);
+      box-shadow:0 30px 80px rgba(0,0,0,.5),0 0 55px rgba(22,191,255,.1),inset 0 1px rgba(255,255,255,.07);
+    }
+    .principle{
+      background:rgba(13,20,30,.7);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      border:1px solid rgba(108,221,255,.1);
+      transition:border-color .25s,box-shadow .25s;
+    }
+    .principle:hover{
+      border-color:rgba(108,221,255,.3);
+      box-shadow:0 8px 30px rgba(0,242,254,.08);
+    }
+    /* h1 text glow */
+    .hero h1{
+      text-shadow:0 0 80px rgba(22,191,255,.12);
+    }
+    /* section h2 subtle glow */
+    h2{
+      text-shadow:0 0 60px rgba(22,191,255,.07);
+    }
+    /* dot pulse */
+    .dot{
+      animation:dotPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes dotPulse{
+      0%,100%{box-shadow:0 0 8px var(--blue),0 0 18px var(--blue)}
+      50%{box-shadow:0 0 18px var(--blue),0 0 40px var(--blue),0 0 60px rgba(22,191,255,.4)}
+    }
+    /* floating card glass */
+    .hero-floating-card{
+      background:rgba(11,19,28,.75);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      border:1px solid rgba(108,221,255,.35);
+      box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 25px rgba(22,191,255,.1);
+    }
+
     @media(max-width:950px){
       .hero-grid,.why,.contact-grid,.faq-grid{grid-template-columns:1fr}.hero-art{max-width:700px;margin:0 auto;width:100%}
       .services{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}
