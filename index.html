@@ -72,25 +72,575 @@
     .micro{margin-top:42px;color:#697587;font-size:12px}
     .micro strong{color:#bdc7d2;font-weight:600}
 
-    .hero-art{position:relative}
-    .glow{position:absolute;width:430px;height:430px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(22,191,255,.18),transparent 68%);filter:blur(10px)}
-    .browser{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:17px;background:#080c12;box-shadow:0 35px 100px rgba(0,0,0,.58);transform:rotate(1.2deg)}
-    .browser-top{height:43px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 15px;gap:6px}
-    .browser-top span{width:7px;height:7px;border-radius:50%;background:#566273}
-    .browser-body{padding:27px;min-height:410px;background:linear-gradient(145deg,#101923,#070a0e)}
-    .browser-brand{font-size:10px;letter-spacing:2px;color:#e5ebf1;display:flex;justify-content:space-between}
-    .mini-lines{display:flex;gap:9px}.mini-lines i{width:24px;height:5px;background:#293541;border-radius:4px}
-    .browser-heading{font-family:"Space Grotesk";font-size:42px;line-height:1.03;margin-top:60px}
-    .browser-heading em{font-style:normal;color:var(--blue2)}
-    .browser-text{font-size:12px;color:#7e8b9c;max-width:82%;margin-top:15px}
-    .browser-button{display:inline-flex;margin-top:22px;padding:10px 15px;border-radius:7px;background:#f5f8fb;color:#071019;font-size:11px;font-weight:700}
-    .browser-stats{display:flex;gap:9px;margin-top:33px}.browser-stats div{flex:1;border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:10px}
-    .browser-stats b{display:block;font-family:"Space Grotesk";font-size:15px}.browser-stats small{color:#687587;font-size:9px}
-    .floating{
-      position:absolute;right:-25px;bottom:50px;background:#0c131b;border:1px solid rgba(108,221,255,.27);
-      padding:17px 19px;border-radius:12px;box-shadow:0 18px 50px #0009
-    }
-    .floating b{display:block;font-family:"Space Grotesk";font-size:21px}.floating span{font-size:11px;color:#748194}
+    /* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 790px;
+  display: flex;
+  align-items: center;
+  padding: 90px 0 100px;
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 80px;
+  align-items: center;
+}
+
+
+/* LEFT SIDE */
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 18px var(--blue);
+}
+
+.hero h1 {
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.02;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.gradient {
+  background:
+    linear-gradient(
+      100deg,
+      #ffffff 5%,
+      #9eeaff 45%,
+      #13bdf5 85%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-copy > p {
+  max-width: 570px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+  margin-top: 27px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 9px;
+
+  padding: 13px 19px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.btn span {
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: #f4f7fa;
+  color: #071019;
+  border-color: #f4f7fa;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 45px rgba(22,191,255,.18);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e8edf2;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(108,221,255,.45);
+  background: rgba(22,191,255,.05);
+}
+
+.micro {
+  margin-top: 42px;
+  color: #596779;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+}
+
+.micro strong {
+  color: #aeb9c7;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.hero-visual {
+  position: relative;
+  min-height: 560px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Background glow */
+
+.hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(22,191,255,.18) 0%,
+      rgba(22,191,255,.07) 35%,
+      transparent 70%
+    );
+
+  filter: blur(8px);
+
+  pointer-events: none;
+}
+
+
+/* Decorative orbital lines */
+
+.hero-orbit {
+  position: absolute;
+
+  border: 1px solid rgba(108,221,255,.08);
+
+  border-radius: 50%;
+
+  transform: rotate(-20deg);
+}
+
+.orbit-1 {
+  width: 520px;
+  height: 260px;
+}
+
+.orbit-2 {
+  width: 430px;
+  height: 210px;
+}
+
+
+/* Main card */
+
+.hero-card {
+  position: relative;
+  z-index: 2;
+
+  width: min(500px, 100%);
+
+  min-height: 505px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111b25 0%,
+      #090e14 65%,
+      #070a0f 100%
+    );
+
+  border: 1px solid rgba(255,255,255,.13);
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.65),
+    inset 0 1px rgba(255,255,255,.05);
+
+  overflow: hidden;
+
+  transform: rotate(2deg);
+
+  transition:
+    transform .5s ease,
+    box-shadow .5s ease;
+}
+
+.hero-card:hover {
+  transform: rotate(0deg) translateY(-5px);
+
+  box-shadow:
+    0 45px 110px rgba(0,0,0,.7),
+    0 0 60px rgba(22,191,255,.07),
+    inset 0 1px rgba(255,255,255,.06);
+}
+
+
+/* Top bar */
+
+.hero-card-top {
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 25px;
+
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.hero-card-logo img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.hero-card-nav {
+  display: flex;
+  gap: 7px;
+}
+
+.hero-card-nav span {
+  width: 27px;
+  height: 5px;
+
+  border-radius: 10px;
+
+  background: #273642;
+}
+
+
+/* Content */
+
+.hero-card-content {
+  padding: 48px 45px 35px;
+}
+
+.hero-small-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #728194;
+}
+
+.hero-card-title {
+  font-family: "Space Grotesk", Arial, sans-serif;
+
+  font-size: 57px;
+  line-height: .95;
+
+  letter-spacing: -.065em;
+
+  margin-top: 30px;
+}
+
+.hero-card-title span {
+  color: var(--blue2);
+}
+
+.hero-card-content > p {
+  max-width: 340px;
+
+  color: #778597;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  margin-top: 26px;
+}
+
+
+/* Accent line */
+
+.hero-card-line {
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(108,221,255,.5),
+      transparent
+    );
+
+  margin-top: 45px;
+}
+
+
+/* Bottom information */
+
+.hero-card-bottom {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.hero-card-bottom div {
+  padding: 12px 13px;
+
+  border-radius: 9px;
+
+  background: rgba(255,255,255,.025);
+
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.hero-card-bottom strong {
+  display: block;
+
+  font-family: "Space Grotesk";
+
+  font-size: 15px;
+
+  color: #eaf1f7;
+}
+
+.hero-card-bottom span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  color: #667486;
+}
+
+
+/* Floating card */
+
+.hero-floating-card {
+  position: absolute;
+
+  right: -22px;
+  bottom: 48px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 16px 19px;
+
+  background: #0b131c;
+
+  border: 1px solid rgba(108,221,255,.3);
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.55);
+
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-icon {
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  color: var(--blue2);
+
+  background: rgba(22,191,255,.08);
+
+  border: 1px solid rgba(108,221,255,.18);
+}
+
+.hero-floating-card strong {
+  display: block;
+
+  font-family: "Space Grotesk";
+
+  font-size: 14px;
+}
+
+.hero-floating-card span {
+  display: block;
+
+  color: #667486;
+
+  font-size: 10px;
+
+  margin-top: 2px;
+}
+
+
+/* EST 2026 */
+
+.hero-number {
+  position: absolute;
+
+  left: 0;
+  bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #536173;
+
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.hero-number strong {
+  color: #9ba8b8;
+
+  font-family: "Space Grotesk";
+
+  font-size: 13px;
+}
+
+
+/* Floating animation */
+
+@keyframes floatCard {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE HERO
+========================================= */
+
+@media (max-width: 950px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .hero-copy {
+    max-width: 700px;
+  }
+
+  .hero-visual {
+    max-width: 620px;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .hero {
+    padding: 70px 0 80px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-copy > p {
+    font-size: 15px;
+  }
+
+  .hero-visual {
+    min-height: 470px;
+  }
+
+  .hero-card {
+    min-height: 420px;
+    transform: rotate(1deg);
+  }
+
+  .hero-card-content {
+    padding: 35px 27px 25px;
+  }
+
+  .hero-card-title {
+    font-size: 43px;
+  }
+
+  .hero-card-bottom span {
+    font-size: 8px;
+  }
+
+  .hero-floating-card {
+    right: -5px;
+    bottom: 20px;
+  }
+
+  .hero-number {
+    left: 8px;
+    bottom: 5px;
+  }
+
+  .orbit-1 {
+    width: 390px;
+  }
+
+  .orbit-2 {
+    width: 320px;
+  }
+
+}
 
     .section{padding:105px 0;border-top:1px solid var(--line)}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:48px}
@@ -197,31 +747,133 @@
 <main id="main">
 <section class="hero" id="top">
   <div class="wrap hero-grid">
+
+    <!-- LEFT -->
     <div class="hero-copy">
-      <div class="eyebrow"><span class="dot"></span> Web Design & Development</div>
-      <h1>Websites that move <span class="gradient">businesses forward.</span></h1>
-      <p>We design and build modern, fast and conversion-focused websites that make your business look credible, communicate clearly and turn more visitors into customers.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#contact">Get a free website preview ↗</a>
-        <a class="btn btn-secondary" href="#work">Explore our work ↓</a>
+
+      <div class="eyebrow">
+        <span class="dot"></span>
+        WEB DESIGN & DEVELOPMENT
       </div>
-      <div class="micro">SERVING <strong>AMBITIOUS BUSINESSES</strong> · US & INDIA</div>
+
+      <h1>
+        We build websites<br>
+        that make businesses
+        <span class="gradient">stand out.</span>
+      </h1>
+
+      <p>
+        Evolve Web Studios creates modern, high-performance websites
+        designed to build trust, communicate your value and turn
+        visitors into customers.
+      </p>
+
+      <div class="actions">
+        <a href="#contact" class="btn btn-primary">
+          Start a project
+          <span>↗</span>
+        </a>
+
+        <a href="#work" class="btn btn-secondary">
+          View our work
+          <span>↓</span>
+        </a>
+      </div>
+
+      <div class="micro">
+        <strong>WEB DESIGN</strong>
+        &nbsp; · &nbsp;
+        <strong>DEVELOPMENT</strong>
+        &nbsp; · &nbsp;
+        <strong>BRANDING</strong>
+      </div>
+
     </div>
 
-    <div class="hero-art">
-      <div class="glow"></div>
-      <div class="browser">
-        <div class="browser-top"><span></span><span></span><span></span></div>
-        <div class="browser-body">
-          <div class="browser-brand"><b>EVOLVE WEB STUDIOS</b><div class="mini-lines"><i></i><i></i><i></i></div></div>
-          <div class="browser-heading">Your business<br><em>deserves better.</em></div>
-          <p class="browser-text">A clear digital presence built to earn attention, trust and enquiries.</p>
-          <a class="browser-button" href="#contact">Build your site ↗</a>
-          <div class="browser-stats"><div><b>01</b><small>Clear goal</small></div><div><b>100%</b><small>Responsive</small></div><div><b>∞</b><small>Built to evolve</small></div></div>
+
+    <!-- RIGHT -->
+    <div class="hero-visual">
+
+      <div class="hero-orbit orbit-1"></div>
+      <div class="hero-orbit orbit-2"></div>
+
+      <!-- Main visual -->
+      <div class="hero-card">
+
+        <div class="hero-card-top">
+          <div class="hero-card-logo">
+            <img src="assets/logo.png" alt="Evolve Web Studios">
+          </div>
+
+          <div class="hero-card-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="hero-card-content">
+
+          <div class="hero-small-label">
+            DIGITAL EXPERIENCE
+          </div>
+
+          <div class="hero-card-title">
+            Build.
+            <br>
+            <span>Grow.</span>
+            <br>
+            Evolve.
+          </div>
+
+          <p>
+            Digital experiences designed around
+            your business and your customers.
+          </p>
+
+          <div class="hero-card-line"></div>
+
+          <div class="hero-card-bottom">
+            <div>
+              <strong>01</strong>
+              <span>Strategy</span>
+            </div>
+
+            <div>
+              <strong>02</strong>
+              <span>Design</span>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <span>Development</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Floating card -->
+      <div class="hero-floating-card">
+        <div class="floating-icon">✦</div>
+
+        <div>
+          <strong>Built to convert.</strong>
+          <span>Not just to look good.</span>
         </div>
       </div>
-      <div class="floating"><b>01</b><span>First impressions matter.</span></div>
+
+
+      <!-- Small floating number -->
+      <div class="hero-number">
+        <span>EST.</span>
+        <strong>2026</strong>
+      </div>
+
     </div>
+
   </div>
 </section>
 
