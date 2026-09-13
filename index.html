@@ -1,155 +1,420 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Evolve Web Studios | Modern Websites That Move Businesses Forward</title>
-<meta name="description" content="Evolve Web Studios designs and builds modern, fast, conversion-focused websites for ambitious businesses in the US and India.">
-<meta name="theme-color" content="#05070b">
-<link rel="icon" href="assets/evolve-logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#05070b;--panel:#0a0f16;--panel2:#0d141d;--text:#f6f8fb;--muted:#9aa6b6;--dim:#697587;--line:rgba(255,255,255,.09);--blue:#19bfff;--blue2:#68dcff;--max:1180px}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--text);font-family:"DM Sans",Arial,sans-serif;line-height:1.6;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 80% 8%,rgba(25,191,255,.12),transparent 30%),radial-gradient(circle at 8% 62%,rgba(29,92,255,.07),transparent 30%);z-index:-1}
-a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(var(--max),92vw);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(5,7,11,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:700;letter-spacing:3px}.brand img{width:44px;height:44px;object-fit:contain}.links{display:flex;align-items:center;gap:28px;color:#aeb8c6;font-size:14px}.links a:hover{color:#fff}.nav-actions{display:flex;gap:10px;align-items:center}.outline{border:1px solid rgba(104,220,255,.34);padding:10px 16px;border-radius:8px;font-size:14px}.outline:hover{background:rgba(25,191,255,.08)}.menu{display:none;background:none;border:0;color:white;font-size:25px}
-.hero{min-height:760px;display:flex;align-items:center;position:relative}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:65px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue2);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px}.dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue)}
-h1,h2,h3{font-family:"Space Grotesk",Arial,sans-serif;letter-spacing:-.045em}h1{font-size:clamp(50px,6.5vw,82px);line-height:1.02;max-width:800px}.grad{background:linear-gradient(100deg,#fff 20%,#bcecff 58%,#18bfff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-copy>p{max-width:620px;color:var(--muted);font-size:18px;margin-top:25px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border-radius:8px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}.primary{background:#f4f7fa;color:#071019}.primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(25,191,255,.15)}.secondary:hover{border-color:rgba(104,220,255,.45);background:rgba(25,191,255,.06)}
-.hero-note{margin-top:45px;color:#657184;font-size:12px;letter-spacing:.08em}.hero-visual{position:relative}.orb{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(25,191,255,.18),transparent 68%);filter:blur(8px);top:50%;left:50%;transform:translate(-50%,-50%)}.browser{position:relative;border:1px solid rgba(255,255,255,.13);border-radius:16px;background:#0a0e14;box-shadow:0 30px 90px rgba(0,0,0,.55);overflow:hidden;transform:rotate(1deg)}.browser-top{height:42px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 14px;gap:6px}.browser-top i{width:7px;height:7px;border-radius:50%;background:#536071}.screen{padding:25px;background:linear-gradient(145deg,#0e1822,#070a0e);min-height:370px}.screen-logo{font-size:10px;letter-spacing:2px;color:#dce4ec}.screen-title{font-family:"Space Grotesk";font-size:39px;line-height:1.03;margin-top:62px}.screen-title span{color:var(--blue2)}.screen-line{width:60%;height:7px;background:#29333e;border-radius:5px;margin-top:18px}.screen-button{width:105px;height:34px;border-radius:6px;background:#f4f7fa;margin-top:25px}.float-card{position:absolute;right:-25px;bottom:30px;padding:18px 20px;background:#0c131b;border:1px solid rgba(104,220,255,.25);border-radius:12px;box-shadow:0 18px 50px #0009}.float-card b{display:block;font-size:20px}.float-card span{color:var(--dim);font-size:11px}
-.section{padding:105px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:48px}.section-head p{max-width:470px;color:var(--muted)}h2{font-size:clamp(38px,5vw,60px);line-height:1.04}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:275px;padding:30px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));transition:.2s}.card:hover{transform:translateY(-4px);border-color:rgba(104,220,255,.3)}.card-num{color:var(--blue2);font-size:11px;letter-spacing:2px;font-weight:700}.icon{font-size:26px;margin:42px 0 17px}.card h3{font-size:23px;margin-bottom:10px}.card p{color:var(--muted);font-size:14px}
-.work{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);cursor:pointer;transition:.2s}.project:hover{transform:translateY(-4px);border-color:rgba(104,220,255,.3)}.project-visual{height:350px;padding:30px;display:flex;align-items:end;background:radial-gradient(circle at 75% 25%,rgba(25,191,255,.22),transparent 31%),linear-gradient(135deg,#111b25,#070a0e)}.mock{width:100%;height:215px;border-radius:8px;background:#f3f5f7;color:#17202b;padding:20px;box-shadow:0 25px 60px #0008}.mock-nav{height:7px;width:28%;background:#1c2833;border-radius:4px}.mock-title{font-family:"Space Grotesk";font-size:30px;font-weight:700;line-height:1.02;margin-top:40px}.mock-small{width:48%;height:6px;background:#abb4bd;border-radius:4px;margin-top:16px}.project-info{padding:22px 24px;display:flex;justify-content:space-between;gap:20px}.project-info h3{font-size:21px}.project-info p{font-size:12px;color:var(--dim);margin-top:3px}.arrow{font-size:22px;color:var(--blue2)}
-.process{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}.step{padding:30px;min-height:235px;background:rgba(8,12,18,.6);border-right:1px solid var(--line)}.step:last-child{border-right:0}.step-num{color:var(--blue2);font-family:"Space Grotesk";font-size:13px}.step h3{font-size:22px;margin:55px 0 9px}.step p{font-size:14px;color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}.stat{background:var(--bg);padding:34px}.stat strong{font-family:"Space Grotesk";font-size:39px}.stat span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about p{color:var(--muted);margin-top:20px}.about-box{padding:35px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#0c141d,#080b10)}.quote{font-family:"Space Grotesk";font-size:25px;line-height:1.25}.quote span{color:var(--blue2)}.about-list{margin-top:28px;display:grid;gap:14px}.about-list div{display:flex;gap:12px;color:#c2cad4;font-size:14px}.check{color:var(--blue2)}
-.contact{background:linear-gradient(180deg,rgba(25,191,255,.035),transparent)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px}.contact-copy p{color:var(--muted);max-width:440px;margin-top:20px}.contact-details{margin-top:35px;display:grid;gap:12px;color:#b9c3cf;font-size:14px}.form{display:grid;gap:14px}.field{display:grid;gap:7px}.field label{font-size:12px;color:#aeb8c6}.field input,.field textarea,.field select{width:100%;background:#090e14;color:#fff;border:1px solid var(--line);border-radius:8px;padding:13px 14px;outline:none}.field textarea{min-height:130px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:rgba(104,220,255,.55)}.form .btn{width:max-content}.form-status{font-size:13px;color:var(--blue2);min-height:20px}
-footer{border-top:1px solid var(--line);padding:28px 0;display:flex;justify-content:space-between;color:#657184;font-size:12px}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.76);backdrop-filter:blur(10px);display:none;place-items:center;padding:20px;z-index:50}.modal.open{display:grid}.modal-box{width:min(680px,95vw);background:#0b1119;border:1px solid rgba(104,220,255,.25);border-radius:14px;padding:32px;position:relative}.close{position:absolute;right:17px;top:12px;background:none;border:0;color:#9aa6b6;font-size:28px;cursor:pointer}.modal-box h3{font-size:31px}.modal-box p{color:var(--muted);margin-top:12px}.modal-actions{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap}
-@media(max-width:900px){.hero-grid,.about,.contact-grid{grid-template-columns:1fr}.hero-visual{max-width:650px;margin:auto}.cards{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.step:nth-child(1){border-bottom:1px solid var(--line)}}
-@media(max-width:650px){.links,.nav-actions .outline{display:none}.menu{display:block}.hero{min-height:auto;padding:90px 0}.section{padding:80px 0}.work{grid-template-columns:1fr}.process,.stats{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.section-head{display:block}.section-head p{margin-top:18px}.float-card{right:5px}.screen-title{font-size:31px}.project-visual{height:280px}footer{display:block}footer span{display:block;margin-top:7px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolve Web Studios — Websites That Move Businesses Forward</title>
+  <meta name="description" content="Evolve Web Studios designs and develops modern, fast and conversion-focused websites for ambitious businesses in the US and India.">
+  <meta name="theme-color" content="#05070b">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#05070b; --surface:#090e14; --surface2:#0d141d;
+      --text:#f5f8fc; --muted:#9aa6b6; --dim:#667486;
+      --line:rgba(255,255,255,.09); --blue:#16bfff; --blue2:#6cddff;
+      --max:1180px; --radius:16px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--bg);color:var(--text);font-family:"DM Sans",Arial,sans-serif;
+      line-height:1.6;overflow-x:hidden;
+    }
+    body:before{
+      content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+      background:
+        radial-gradient(circle at 78% 4%,rgba(22,191,255,.12),transparent 28%),
+        radial-gradient(circle at 5% 55%,rgba(30,88,255,.07),transparent 30%);
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(var(--max),92vw);margin:auto}
+    :focus-visible{outline:2px solid var(--blue2);outline-offset:3px}
+    .skip{position:fixed;left:15px;top:-100px;background:white;color:#071019;padding:10px 15px;border-radius:8px;z-index:100;font-weight:700}
+    .skip:focus{top:15px}
+
+    header{
+      position:sticky;top:0;z-index:50;background:rgba(5,7,11,.78);
+      backdrop-filter:blur(18px);border-bottom:1px solid var(--line)
+    }
+    nav{height:80px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:700;letter-spacing:2.5px}
+    .brand img{width:46px;height:46px;object-fit:contain}
+    .links{display:flex;align-items:center;gap:29px;color:#aeb8c6;font-size:14px}
+    .links a{transition:.2s}.links a:hover{color:white}
+    .nav-cta,.btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border:1px solid var(--line);border-radius:9px;padding:12px 18px;
+      font-size:14px;font-weight:700;cursor:pointer;transition:.2s
+    }
+    .nav-cta{border-color:rgba(108,221,255,.35)}
+    .nav-cta:hover{background:rgba(22,191,255,.08);border-color:rgba(108,221,255,.65)}
+    .menu{display:none;background:none;border:0;color:#fff;font-size:25px;cursor:pointer}
+    .mobile-nav{display:none}
+
+    .hero{min-height:760px;display:flex;align-items:center;padding:75px 0 90px}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:70px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue2);font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:24px}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue)}
+    h1,h2,h3{font-family:"Space Grotesk",Arial,sans-serif;letter-spacing:-.045em}
+    h1{font-size:clamp(48px,6.5vw,80px);line-height:1.01;font-weight:600}
+    .gradient{background:linear-gradient(100deg,#fff 15%,#c2edff 55%,#1bc2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy p{max-width:620px;color:var(--muted);font-size:18px;margin-top:25px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+    .btn-primary{background:#f5f8fb;color:#071019;border-color:#f5f8fb}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 15px 40px rgba(22,191,255,.18)}
+    .btn-secondary:hover{background:rgba(22,191,255,.06);border-color:rgba(108,221,255,.5)}
+    .micro{margin-top:42px;color:#697587;font-size:12px}
+    .micro strong{color:#bdc7d2;font-weight:600}
+
+    .hero-art{position:relative}
+    .glow{position:absolute;width:430px;height:430px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(22,191,255,.18),transparent 68%);filter:blur(10px)}
+    .browser{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:17px;background:#080c12;box-shadow:0 35px 100px rgba(0,0,0,.58);transform:rotate(1.2deg)}
+    .browser-top{height:43px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 15px;gap:6px}
+    .browser-top span{width:7px;height:7px;border-radius:50%;background:#566273}
+    .browser-body{padding:27px;min-height:410px;background:linear-gradient(145deg,#101923,#070a0e)}
+    .browser-brand{font-size:10px;letter-spacing:2px;color:#e5ebf1;display:flex;justify-content:space-between}
+    .mini-lines{display:flex;gap:9px}.mini-lines i{width:24px;height:5px;background:#293541;border-radius:4px}
+    .browser-heading{font-family:"Space Grotesk";font-size:42px;line-height:1.03;margin-top:60px}
+    .browser-heading em{font-style:normal;color:var(--blue2)}
+    .browser-text{font-size:12px;color:#7e8b9c;max-width:82%;margin-top:15px}
+    .browser-button{display:inline-flex;margin-top:22px;padding:10px 15px;border-radius:7px;background:#f5f8fb;color:#071019;font-size:11px;font-weight:700}
+    .browser-stats{display:flex;gap:9px;margin-top:33px}.browser-stats div{flex:1;border:1px solid rgba(255,255,255,.08);border-radius:9px;padding:10px}
+    .browser-stats b{display:block;font-family:"Space Grotesk";font-size:15px}.browser-stats small{color:#687587;font-size:9px}
+    .floating{
+      position:absolute;right:-25px;bottom:30px;background:#0c131b;border:1px solid rgba(108,221,255,.27);
+      padding:17px 19px;border-radius:12px;box-shadow:0 18px 50px #0009
+    }
+    .floating b{display:block;font-family:"Space Grotesk";font-size:21px}.floating span{font-size:11px;color:#748194}
+
+    .section{padding:105px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:50px;margin-bottom:48px}
+    .section-head p{max-width:480px;color:var(--muted)}
+    h2{font-size:clamp(38px,5vw,58px);line-height:1.04;font-weight:600}
+    .label{font-size:11px;letter-spacing:1.7px;color:var(--blue2);font-weight:700;margin-bottom:12px;text-transform:uppercase}
+
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .service{
+      padding:30px;min-height:270px;border:1px solid var(--line);border-radius:var(--radius);
+      background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));transition:.2s
+    }
+    .service:hover{transform:translateY(-4px);border-color:rgba(108,221,255,.3)}
+    .service-num{font-size:11px;color:var(--blue2);letter-spacing:1.5px;font-weight:700}
+    .service-icon{width:45px;height:45px;border-radius:11px;display:grid;place-items:center;background:rgba(22,191,255,.09);border:1px solid rgba(108,221,255,.2);color:var(--blue2);font-size:20px;margin:38px 0 19px}
+    .service h3{font-size:22px;margin-bottom:9px}.service p{font-size:14px;color:var(--muted)}
+
+    .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+    .project{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);cursor:pointer;transition:.2s}
+    .project:hover{transform:translateY(-4px);border-color:rgba(108,221,255,.3)}
+    .project-preview{height:340px;padding:29px;display:flex;align-items:end;background:radial-gradient(circle at 75% 25%,rgba(22,191,255,.2),transparent 31%),linear-gradient(135deg,#111b25,#070a0e)}
+    .mock{height:215px;width:100%;background:#f3f5f7;color:#15212b;border-radius:8px;padding:20px;box-shadow:0 25px 60px #0008}
+    .mock-top{width:30%;height:7px;background:#182632;border-radius:4px}
+    .mock-title{font-family:"Space Grotesk";font-size:30px;line-height:1.02;font-weight:700;margin-top:42px}
+    .mock-copy{width:55%;height:6px;background:#aeb7c0;border-radius:4px;margin-top:16px}
+    .mock-btn{width:75px;height:27px;border-radius:5px;background:#15212b;margin-top:20px}
+    .project-info{padding:21px 23px;display:flex;justify-content:space-between;gap:20px}.project-info h3{font-size:20px}.project-info p{font-size:12px;color:var(--dim);margin-top:2px}.project-arrow{color:var(--blue2);font-size:22px}
+
+    .why{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .why-copy>p{color:var(--muted);margin-top:18px;max-width:600px}
+    .principles{display:grid;gap:11px;margin-top:27px}.principle{display:flex;gap:13px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:10px;background:rgba(255,255,255,.018)}
+    .check{color:var(--blue2);font-weight:700}.principle b{font-size:14px}.principle p{font-size:12px;color:var(--dim);margin-top:2px}
+    .manifesto{border:1px solid var(--line);border-radius:var(--radius);padding:38px;background:linear-gradient(145deg,#0d1721,#080c12);box-shadow:inset 0 1px rgba(255,255,255,.04)}
+    .manifesto .big{font-family:"Space Grotesk";font-size:29px;line-height:1.2}.manifesto .big span{color:var(--blue2)}
+    .manifesto hr{border:0;border-top:1px solid var(--line);margin:28px 0}.manifesto small{color:#758195}
+
+    .process{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    .step{padding:30px;min-height:250px;border-right:1px solid var(--line);background:rgba(255,255,255,.012)}.step:last-child{border-right:0}
+    .step-number{font-family:"Space Grotesk";color:var(--blue2);font-size:13px}.step h3{font-size:21px;margin-top:55px;margin-bottom:9px}.step p{font-size:13px;color:var(--muted)}
+
+    .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:75px}.faq-intro p{color:var(--muted);margin-top:18px}.faq{border-top:1px solid var(--line)}
+    .faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;border:0;color:white;text-align:left;padding:22px 0;display:flex;justify-content:space-between;gap:20px;cursor:pointer;font-weight:600;font-size:15px}.faq-q span{color:var(--blue2);font-size:20px;transition:.2s}.faq-item.open .faq-q span{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:13px;transition:max-height .3s ease}.faq-a p{padding:0 35px 21px 0}.faq-item.open .faq-a{max-height:180px}
+
+    .contact{background:linear-gradient(180deg,rgba(22,191,255,.035),transparent)}
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
+    .contact-copy p{color:var(--muted);margin-top:18px;max-width:480px}.contact-info{display:grid;gap:11px;margin-top:31px;color:#b9c3ce;font-size:14px}.contact-info a:hover{color:var(--blue2)}
+    form{display:grid;gap:14px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field label{font-size:10px;color:#8895a6;letter-spacing:1.4px;font-weight:700}.field input,.field select,.field textarea{width:100%;background:#080d13;border:1px solid var(--line);border-radius:9px;padding:13px 14px;color:#fff;outline:none}.field textarea{min-height:135px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(108,221,255,.55)}.form-note{color:#667486;font-size:11px}.status{color:var(--blue2);font-size:13px;min-height:20px}
+
+    footer{padding:28px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#657184;font-size:12px}
+    .footer-links{display:flex;gap:20px}.footer-links a:hover{color:white}
+
+    .modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.78);backdrop-filter:blur(10px);display:none;place-items:center;padding:20px}.modal.show{display:grid}
+    .modal-box{width:min(670px,95vw);background:#0b1119;border:1px solid rgba(108,221,255,.25);border-radius:15px;padding:34px;position:relative}.modal-close{position:absolute;right:15px;top:10px;border:0;background:none;color:#9aa6b6;font-size:29px;cursor:pointer}.modal-box h3{font-size:31px}.modal-box p{color:var(--muted);margin-top:13px}.modal-box .actions{margin-top:24px}
+
+    .top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#0b1118;color:white;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.2s;z-index:30}.top.visible{opacity:1;pointer-events:auto}.top:hover{border-color:var(--blue2);color:var(--blue2)}
+
+    @media(max-width:950px){
+      .hero-grid,.why,.contact-grid,.faq-grid{grid-template-columns:1fr}.hero-art{max-width:700px;margin:0 auto;width:100%}
+      .services{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    }
+    @media(max-width:700px){
+      .links,.nav-cta{display:none}.menu{display:block}.mobile-nav.open{display:flex}
+      .mobile-nav{position:absolute;top:80px;left:0;right:0;background:#070a0f;border-bottom:1px solid var(--line);padding:15px 4vw 25px;flex-direction:column;gap:3px}
+      .mobile-nav a{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+      .mobile-nav .nav-cta{display:flex;margin-top:10px;text-align:center}
+      .hero{padding:80px 0;min-height:auto}.section{padding:80px 0}.section-head{display:block}.section-head p{margin-top:18px}
+      .services,.work-grid,.process{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}
+      .two{grid-template-columns:1fr}.float-card{right:5px}.browser-body{min-height:360px}.browser-heading{font-size:34px}
+      footer{display:block}.footer-links{margin-top:9px}
+    }
+  </style>
 </head>
+
 <body>
+<a class="skip" href="#main">Skip to content</a>
+
 <header>
-<div class="wrap"><nav>
-<a class="brand" href="#top"><img src="assets/evolve-logo.png" alt="Evolve Web Studios logo"><span>EVOLVE</span></a>
-<div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a></div>
-<div class="nav-actions"><a class="outline" href="#contact">Start a project</a><button class="menu" id="menuBtn" aria-label="Open menu">☰</button></div>
-</nav></div>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top" aria-label="Evolve Web Studios home">
+        <img src="assets/logo.png" alt="Evolve Web Studios">
+        <span>EVOLVE</span>
+      </a>
+      <div class="links">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <a class="nav-cta" href="#contact">Start a project ↗</a>
+        <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#contact">Start a project ↗</a>
+    </div>
+  </div>
 </header>
 
-<main id="top">
-<section class="hero"><div class="wrap hero-grid">
-<div class="hero-copy">
-<div class="eyebrow"><span class="dot"></span>Web Design & Development</div>
-<h1>Websites that move <span class="grad">businesses forward.</span></h1>
-<p>We design and build modern, high-performance websites that make businesses look credible, communicate clearly and turn more visitors into customers.</p>
-<div class="actions"><a class="btn primary" href="#contact">Get a free website preview <span>↗</span></a><a class="btn secondary" href="#work">See our work <span>↓</span></a></div>
-<div class="hero-note">SERVING AMBITIOUS BUSINESSES · US & INDIA</div>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> Web Design & Development</div>
+      <h1>Websites that move <span class="gradient">businesses forward.</span></h1>
+      <p>We design and build modern, fast and conversion-focused websites that make your business look credible, communicate clearly and turn more visitors into customers.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Get a free website preview ↗</a>
+        <a class="btn btn-secondary" href="#work">Explore our work ↓</a>
+      </div>
+      <div class="micro">SERVING <strong>AMBITIOUS BUSINESSES</strong> · US & INDIA</div>
+    </div>
+
+    <div class="hero-art">
+      <div class="glow"></div>
+      <div class="browser">
+        <div class="browser-top"><span></span><span></span><span></span></div>
+        <div class="browser-body">
+          <div class="browser-brand"><b>EVOLVE WEB STUDIOS</b><div class="mini-lines"><i></i><i></i><i></i></div></div>
+          <div class="browser-heading">Your business<br><em>deserves better.</em></div>
+          <p class="browser-text">A clear digital presence built to earn attention, trust and enquiries.</p>
+          <a class="browser-button" href="#contact">Build your site ↗</a>
+          <div class="browser-stats"><div><b>01</b><small>Clear goal</small></div><div><b>100%</b><small>Responsive</small></div><div><b>∞</b><small>Built to evolve</small></div></div>
+        </div>
+      </div>
+      <div class="floating"><b>01</b><span>First impressions matter.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+<div class="wrap">
+  <div class="section-head"><div><div class="label">What we do</div><h2>Everything your<br>website needs.</h2></div><p>Strategy, design and development working together to create a website with a clear job to do — not just another pretty page.</p></div>
+  <div class="services">
+    <article class="service"><div class="service-num">01 / DESIGN</div><div class="service-icon">✦</div><h3>Website Design</h3><p>Custom visual direction, page layouts and responsive interfaces built around your brand and audience.</p></article>
+    <article class="service"><div class="service-num">02 / DEVELOPMENT</div><div class="service-icon">⌘</div><h3>Web Development</h3><p>Clean, responsive builds that work smoothly across phones, tablets and desktops.</p></article>
+    <article class="service"><div class="service-num">03 / REDESIGN</div><div class="service-icon">↗</div><h3>Website Redesign</h3><p>Turn an outdated website into a modern experience while keeping the useful parts of what you already have.</p></article>
+    <article class="service"><div class="service-num">04 / LANDING PAGES</div><div class="service-icon">▱</div><h3>Landing Pages</h3><p>Focused pages for campaigns, services and offers with clear hierarchy and strong calls-to-action.</p></article>
+    <article class="service"><div class="service-num">05 / MOBILE-FIRST</div><div class="service-icon">⌁</div><h3>Mobile-first</h3><p>Designed for the screens customers actually use to search, browse and contact local businesses.</p></article>
+    <article class="service"><div class="service-num">06 / SUPPORT</div><div class="service-icon">+</div><h3>Ongoing Support</h3><p>Small updates, content changes and improvements after launch as your business continues to evolve.</p></article>
+  </div>
 </div>
-<div class="hero-visual"><div class="orb"></div><div class="browser">
-<div class="browser-top"><i></i><i></i><i></i></div><div class="screen">
-<div class="screen-logo">EVOLVE WEB STUDIOS</div>
-<div class="screen-title">Your business<br><span>deserves better.</span></div>
-<div class="screen-line"></div><div class="screen-button"></div>
-</div></div><div class="float-card"><b>01</b><span>First impressions matter.</span></div></div>
-</div></section>
+</section>
 
-<section class="section" id="services"><div class="wrap">
-<div class="section-head"><h2>Everything your<br>website needs.</h2><p>We keep the process focused: strategy, design and development working together to create a website with a clear job to do.</p></div>
-<div class="cards">
-<article class="card"><div class="card-num">01 / DESIGN</div><div class="icon">✦</div><h3>Website Design</h3><p>Custom visual systems, layouts and responsive interfaces built around your business and audience.</p></article>
-<article class="card"><div class="card-num">02 / DEVELOPMENT</div><div class="icon">⌘</div><h3>Web Development</h3><p>Clean, responsive builds that are fast, accessible and ready for real customers on every screen.</p></article>
-<article class="card"><div class="card-num">03 / REDESIGN</div><div class="icon">↗</div><h3>Website Redesign</h3><p>Turn an outdated website into a modern digital experience without losing what already works.</p></article>
-<article class="card"><div class="card-num">04 / LANDING PAGES</div><div class="icon">▱</div><h3>Landing Pages</h3><p>Focused pages for campaigns, services and offers with strong hierarchy and clear calls-to-action.</p></article>
-<article class="card"><div class="card-num">05 / MOBILE</div><div class="icon">⌁</div><h3>Mobile-first</h3><p>Because a great website has to work where your customers actually browse, search and contact you.</p></article>
-<article class="card"><div class="card-num">06 / SUPPORT</div><div class="icon">+</div><h3>Ongoing Support</h3><p>Need a small update after launch? We can keep your website fresh as your business evolves.</p></article>
-</div></div></section>
+<section class="section" id="work">
+<div class="wrap">
+  <div class="section-head"><div><div class="label">Selected concepts</div><h2>Work with a<br>purpose.</h2></div><p>These concept projects demonstrate the direction and quality Evolve brings to local businesses. Real client work will be added here as the studio grows.</p></div>
+  <div class="work-grid">
+    <article class="project" data-title="Summit Roofing" data-text="A high-converting local-service concept for a US roofing company. The structure puts trust, services, proof and the estimate CTA where customers can find them quickly.">
+      <div class="project-preview"><div class="mock"><div class="mock-top"></div><div class="mock-title">Built to stand<br>above the rest.</div><div class="mock-copy"></div><div class="mock-btn"></div></div></div>
+      <div class="project-info"><div><h3>Summit Roofing</h3><p>Local service concept · USA</p></div><span class="project-arrow">↗</span></div>
+    </article>
+    <article class="project" data-title="Oak & Stone Interiors" data-text="A premium service-business concept for an interior design studio. Visual storytelling, project presentation and consultation CTAs lead the visitor through the site.">
+      <div class="project-preview"><div class="mock"><div class="mock-top"></div><div class="mock-title">A better space<br>starts here.</div><div class="mock-copy"></div><div class="mock-btn"></div></div></div>
+      <div class="project-info"><div><h3>Oak & Stone Interiors</h3><p>Service business concept · USA</p></div><span class="project-arrow">↗</span></div>
+    </article>
+    <article class="project" data-title="Vrinda House" data-text="A boutique hospitality concept for India, focused on atmosphere, rooms, location and direct enquiries rather than making the visitor hunt for information.">
+      <div class="project-preview"><div class="mock"><div class="mock-top"></div><div class="mock-title">Stay somewhere<br>memorable.</div><div class="mock-copy"></div><div class="mock-btn"></div></div></div>
+      <div class="project-info"><div><h3>Vrinda House</h3><p>Hospitality concept · India</p></div><span class="project-arrow">↗</span></div>
+    </article>
+    <article class="project" data-title="Apex Auto Care" data-text="A mobile-first auto-care concept that makes services, trust signals and appointment actions easy to understand for someone searching locally.">
+      <div class="project-preview"><div class="mock"><div class="mock-top"></div><div class="mock-title">Your car.<br>Our standard.</div><div class="mock-copy"></div><div class="mock-btn"></div></div></div>
+      <div class="project-info"><div><h3>Apex Auto Care</h3><p>Local business concept · USA</p></div><span class="project-arrow">↗</span></div>
+    </article>
+  </div>
+</div>
+</section>
 
-<section class="section" id="work"><div class="wrap">
-<div class="section-head"><h2>Selected<br>concepts.</h2><p>Portfolio concepts created to demonstrate our approach. Real client work will be added as Evolve grows.</p></div>
-<div class="work">
-<article class="project" data-title="Summit Roofing" data-desc="A conversion-focused website concept for a US roofing company. The direction uses strong service messaging, trust signals and a clear estimate CTA.">
-<div class="project-visual"><div class="mock"><div class="mock-nav"></div><div class="mock-title">Built to stand<br>above the rest.</div><div class="mock-small"></div></div></div>
-<div class="project-info"><div><h3>Summit Roofing</h3><p>Local business concept · USA</p></div><span class="arrow">↗</span></div></article>
-<article class="project" data-title="Oak & Stone Interiors" data-desc="A premium service-business concept for an interior design studio. The layout is built around visual storytelling, services and consultation enquiries.">
-<div class="project-visual"><div class="mock"><div class="mock-nav"></div><div class="mock-title">A better space<br>starts here.</div><div class="mock-small"></div></div></div>
-<div class="project-info"><div><h3>Oak & Stone Interiors</h3><p>Service business concept · USA</p></div><span class="arrow">↗</span></div></article>
-<article class="project" data-title="Vrinda House" data-desc="A hospitality concept designed for a boutique stay in India, focused on atmosphere, rooms, location and direct enquiries.">
-<div class="project-visual"><div class="mock"><div class="mock-nav"></div><div class="mock-title">Stay somewhere<br>memorable.</div><div class="mock-small"></div></div></div>
-<div class="project-info"><div><h3>Vrinda House</h3><p>Hospitality concept · India</p></div><span class="arrow">↗</span></div></article>
-<article class="project" data-title="Apex Auto Care" data-desc="A local auto-care concept designed to make services, pricing and appointment actions easy to understand on mobile.">
-<div class="project-visual"><div class="mock"><div class="mock-nav"></div><div class="mock-title">Your car.<br>Our standard.</div><div class="mock-small"></div></div></div>
-<div class="project-info"><div><h3>Apex Auto Care</h3><p>Local business concept · USA</p></div><span class="arrow">↗</span></div></article>
-</div></div></section>
+<section class="section" id="about">
+<div class="wrap why">
+  <div class="why-copy">
+    <div class="label">Why Evolve</div><h2>Good design should<br>do more than look good.</h2>
+    <p>Your website is often the first conversation a customer has with your business. It should make the right impression quickly, explain your value clearly and make the next step obvious.</p>
+    <div class="principles">
+      <div class="principle"><span class="check">✓</span><div><b>Purpose before decoration</b><p>Every section earns its place.</p></div></div>
+      <div class="principle"><span class="check">✓</span><div><b>Mobile-first thinking</b><p>Great experiences on small screens too.</p></div></div>
+      <div class="principle"><span class="check">✓</span><div><b>Clear communication</b><p>No unnecessary agency complexity.</p></div></div>
+    </div>
+  </div>
+  <div class="manifesto">
+    <div class="big">We don't want to build you a website that simply <span>exists.</span><br><br>We want to build one that <span>works.</span></div>
+    <hr><small>EVOLVE WEB STUDIOS · WEB DESIGN · DEVELOPMENT · DIGITAL PRESENCE</small>
+  </div>
+</div>
+</section>
 
-<section class="section" id="process"><div class="wrap">
-<div class="section-head"><h2>A simple process.<br>Built to move.</h2><p>No bloated agency process. We keep communication clear, decisions focused and every stage tied to the goal.</p></div>
-<div class="process">
-<div class="step"><div class="step-num">01</div><h3>Discover</h3><p>We learn about your business, customers, goals and what your current website is missing.</p></div>
-<div class="step"><div class="step-num">02</div><h3>Design</h3><p>We shape the structure, visual direction and user journey before the build begins.</p></div>
-<div class="step"><div class="step-num">03</div><h3>Build</h3><p>We turn the approved direction into a responsive, polished website ready for real users.</p></div>
-<div class="step"><div class="step-num">04</div><h3>Launch</h3><p>We help connect the domain, publish the site and make sure the essentials work.</p></div>
-</div></div></section>
+<section class="section" id="process">
+<div class="wrap">
+  <div class="section-head"><div><div class="label">How it works</div><h2>A simple process.<br>Built to move.</h2></div><p>No bloated agency process. We keep communication clear, decisions focused and every stage connected to the business goal.</p></div>
+  <div class="process">
+    <div class="step"><div class="step-number">01</div><h3>Discover</h3><p>We understand your business, audience, goals and what your current online presence is missing.</p></div>
+    <div class="step"><div class="step-number">02</div><h3>Design</h3><p>We shape the structure, visual direction and user journey before the development work begins.</p></div>
+    <div class="step"><div class="step-number">03</div><h3>Build</h3><p>We turn the approved direction into a responsive, polished website ready for real users.</p></div>
+    <div class="step"><div class="step-number">04</div><h3>Launch</h3><p>We connect the domain, publish the site and check that the important pieces work correctly.</p></div>
+  </div>
+</div>
+</section>
 
-<section class="section" id="about"><div class="wrap about">
-<div><div class="eyebrow"><span class="dot"></span>Why Evolve</div><h2>Good design should<br>do more than look good.</h2><p>Evolve Web Studios is a small, focused web studio built around one idea: businesses deserve websites that reflect the quality of what they actually offer.</p><p>We combine modern design with practical development so your website is beautiful, easy to use and built around action.</p></div>
-<div class="about-box"><div class="quote">“Your website is often the first conversation a customer has with your business. <span>Make it count.</span>”</div><div class="about-list"><div><span class="check">✓</span> Clear communication</div><div><span class="check">✓</span> Modern, purposeful design</div><div><span class="check">✓</span> Mobile-first development</div><div><span class="check">✓</span> Built for real business goals</div></div></div>
-</div></section>
+<section class="section" id="faq">
+<div class="wrap">
+  <div class="faq-grid">
+    <div class="faq-intro"><div class="label">Questions</div><h2>Let's make it<br>simple.</h2><p>Here are the answers to the questions businesses usually have before starting a website project.</p></div>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q">How long does a typical project take?<span>+</span></button><div class="faq-a"><p>Landing pages can usually be completed quickly, while full business websites take longer depending on scope, content and feedback.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What do you need from me to get started?<span>+</span></button><div class="faq-a"><p>Usually a short overview of your business, goals, services, branding and any content or examples you already have. If you're starting from scratch, we can structure the project with you.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can you redesign my existing website?<span>+</span></button><div class="faq-a"><p>Yes. A redesign can improve the visual quality, mobile experience, structure and calls-to-action while keeping the useful information you already have.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you work with businesses in the USA?<span>+</span></button><div class="faq-a"><p>Yes. Evolve is positioned to work with businesses in both the US and India, with communication handled remotely through email and scheduled calls.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you provide support after launch?<span>+</span></button><div class="faq-a"><p>Yes. We can help with post-launch updates, content changes and future improvements when you need them.</p></div></div>
+    </div>
+  </div>
+</div>
+</section>
 
-<section class="section"><div class="wrap"><div class="stats">
-<div class="stat"><strong>01</strong><span>Clear goal behind every page</span></div><div class="stat"><strong>100%</strong><span>Responsive by default</span></div><div class="stat"><strong>∞</strong><span>Room to evolve with your business</span></div>
-</div></div></section>
+<section class="section contact" id="contact">
+<div class="wrap contact-grid">
+  <div class="contact-copy">
+    <div class="eyebrow"><span class="dot"></span> Start a conversation</div>
+    <h2>Ready to<br>evolve?</h2>
+    <p>Tell us about your business and what you want your website to achieve. We'll take a look and get back to you.</p>
+    <div class="contact-info">
+      <a href="mailto:evolvewebstudios@gmail.com">✉ evolvewebstudios@gmail.com</a>
+      <span>🌎 Serving businesses in the US & India</span>
+      <span>⚡ Website previews available for selected businesses</span>
+      <a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener">◎ @evolvewebstudios</a>
+    </div>
+  </div>
 
-<section class="section contact" id="contact"><div class="wrap contact-grid">
-<div class="contact-copy"><div class="eyebrow"><span class="dot"></span>Start a conversation</div><h2>Ready to<br>evolve?</h2><p>Tell us what you're building, what isn't working or simply what you want your new website to achieve.</p><div class="contact-details"><div>✉ hello@evolvewebstudios.in</div><div>🌎 US & India</div><div>⚡ Free website preview available</div></div></div>
-<form class="form" id="contactForm">
-<div class="field"><label for="name">YOUR NAME</label><input id="name" required placeholder="Your name"></div>
-<div class="field"><label for="business">BUSINESS NAME</label><input id="business" required placeholder="Your business"></div>
-<div class="field"><label for="email">EMAIL</label><input id="email" type="email" required placeholder="you@company.com"></div>
-<div class="field"><label for="service">WHAT DO YOU NEED?</label><select id="service"><option>New business website</option><option>Website redesign</option><option>Landing page</option><option>Something else</option></select></div>
-<div class="field"><label for="message">TELL US A LITTLE ABOUT IT</label><textarea id="message" required placeholder="Tell us about your business and what you want your website to do."></textarea></div>
-<button class="btn primary" type="submit">Send project enquiry ↗</button>
-<div class="form-status" id="formStatus"></div>
-</form>
-</div></section>
+  <form id="contactForm">
+    <div class="two">
+      <div class="field"><label for="name">YOUR NAME</label><input id="name" name="name" required placeholder="John Smith"></div>
+      <div class="field"><label for="business">BUSINESS NAME</label><input id="business" name="business" required placeholder="Your business"></div>
+    </div>
+    <div class="field"><label for="email">EMAIL</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div>
+    <div class="field"><label for="website">CURRENT WEBSITE (OPTIONAL)</label><input id="website" name="website" placeholder="https://"></div>
+    <div class="field"><label for="service">WHAT DO YOU NEED?</label><select id="service" name="service"><option>New business website</option><option>Website redesign</option><option>Landing page</option><option>Website improvements</option><option>Something else</option></select></div>
+    <div class="field"><label for="message">TELL US ABOUT THE PROJECT</label><textarea id="message" name="message" required placeholder="What does your business do? What would you like the website to achieve?"></textarea></div>
+    <button class="btn btn-primary" type="submit">Send project enquiry ↗</button>
+    <div class="form-note">Submitting opens your email app with the enquiry already prepared. No information is stored on this website.</div>
+    <div class="status" id="status" aria-live="polite"></div>
+  </form>
+</div>
+</section>
 </main>
 
-<div class="wrap"><footer><span>© 2026 Evolve Web Studios. All rights reserved.</span><span>evolvewebstudios.in</span></footer></div>
+<div class="wrap">
+<footer>
+  <span>© 2026 Evolve Web Studios. All rights reserved.</span>
+  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="#contact">Contact</a><a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener">Instagram</a></div>
+</footer>
+</div>
 
-<div class="modal" id="modal"><div class="modal-box"><button class="close" id="closeModal" aria-label="Close">×</button><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="modal-actions"><a class="btn primary" href="#contact" id="modalContact">Build something similar ↗</a><button class="btn secondary" id="modalCloseBtn">Close</button></div></div></div>
+<button class="top" id="topBtn" aria-label="Back to top">↑</button>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close project">×</button>
+    <div class="label">Concept project</div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#contact" id="modalContact">Build something similar ↗</a>
+      <button class="btn btn-secondary" id="modalClose2">Close</button>
+    </div>
+  </div>
+</div>
 
 <script>
-const menuBtn=document.getElementById('menuBtn'), links=document.querySelector('.links');
-menuBtn?.addEventListener('click',()=>{links.style.display=links.style.display==='flex'?'none':'flex';links.style.position='absolute';links.style.top='78px';links.style.left='0';links.style.right='0';links.style.padding='22px';links.style.background='#070a0f';links.style.flexDirection='column';links.style.borderBottom='1px solid #18202a'});
-document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=650)links.style.display='none'}));
+  const menu=document.getElementById('menu'), mobile=document.getElementById('mobileNav');
+  menu.addEventListener('click',()=>{
+    const open=mobile.classList.toggle('open');
+    menu.setAttribute('aria-expanded',open);
+  });
+  mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    mobile.classList.remove('open');menu.setAttribute('aria-expanded','false');
+  }));
 
-const modal=document.getElementById('modal');
-document.querySelectorAll('.project').forEach(card=>card.addEventListener('click',()=>{
- document.getElementById('modalTitle').textContent=card.dataset.title;
- document.getElementById('modalDesc').textContent=card.dataset.desc;
- modal.classList.add('open');
-}));
-function closeModal(){modal.classList.remove('open')}
-document.getElementById('closeModal').onclick=closeModal;
-document.getElementById('modalCloseBtn').onclick=closeModal;
-modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
-document.getElementById('modalContact').addEventListener('click',closeModal);
+  const modal=document.getElementById('modal');
+  document.querySelectorAll('.project').forEach(card=>{
+    card.addEventListener('click',()=>{
+      document.getElementById('modalTitle').textContent=card.dataset.title;
+      document.getElementById('modalText').textContent=card.dataset.text;
+      modal.classList.add('show');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeModal(){modal.classList.remove('show');document.body.style.overflow='';}
+  document.getElementById('modalClose').onclick=closeModal;
+  document.getElementById('modalClose2').onclick=closeModal;
+  modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 
-document.getElementById('contactForm').addEventListener('submit',e=>{
- e.preventDefault();
- const n=document.getElementById('name').value.trim(), b=document.getElementById('business').value.trim();
- const em=document.getElementById('email').value.trim(), s=document.getElementById('service').value, m=document.getElementById('message').value.trim();
- const subject=encodeURIComponent('New Evolve project enquiry — '+b);
- const body=encodeURIComponent(`Name: ${n}\nBusiness: ${b}\nEmail: ${em}\nService: ${s}\n\nProject details:\n${m}`);
- document.getElementById('formStatus').textContent='Opening your email app…';
- window.location.href=`mailto:hello@evolvewebstudios.in?subject=${subject}&body=${body}`;
-});
+  document.querySelectorAll('.faq-q').forEach(q=>{
+    q.addEventListener('click',()=>{
+      const item=q.parentElement;
+      document.querySelectorAll('.faq-item').forEach(other=>{if(other!==item)other.classList.remove('open')});
+      item.classList.toggle('open');
+    });
+  });
+
+  const form=document.getElementById('contactForm'), status=document.getElementById('status');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const data=new FormData(form);
+    const business=data.get('business');
+    const subject=encodeURIComponent('New Evolve project enquiry — '+business);
+    const body=encodeURIComponent(
+      'Name: '+data.get('name')+'\n'+
+      'Business: '+business+'\n'+
+      'Email: '+data.get('email')+'\n'+
+      'Current website: '+(data.get('website')||'Not provided')+'\n'+
+      'Service: '+data.get('service')+'\n\n'+
+      'Project details:\n'+data.get('message')
+    );
+    status.textContent='Opening your email app…';
+    window.location.href='mailto:evolvewebstudios@gmail.com?subject='+subject+'&body='+body;
+  });
+
+  const topBtn=document.getElementById('topBtn');
+  window.addEventListener('scroll',()=>topBtn.classList.toggle('visible',window.scrollY>650));
+  topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
