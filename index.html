@@ -699,20 +699,16 @@
     .faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;border:0;color:white;text-align:left;padding:22px 0;display:flex;justify-content:space-between;gap:20px;cursor:pointer;font-weight:600;font-size:15px}.faq-q span{color:var(--blue2);font-size:20px;transition:.2s}.faq-item.open .faq-q span{transform:rotate(45deg)}
     .faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:13px;transition:max-height .3s ease}.faq-a p{padding:0 35px 21px 0}.faq-item.open .faq-a{max-height:180px}
 
-    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:0}
-    .plan{padding:32px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015));display:flex;flex-direction:column;gap:0;transition:.2s}
-    .plan:hover{transform:translateY(-4px);border-color:rgba(108,221,255,.3)}
-    .plan.featured{border-color:rgba(108,221,255,.45);background:linear-gradient(145deg,rgba(22,191,255,.08),rgba(22,191,255,.02))}
-    .plan-badge{font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--blue2);margin-bottom:18px;text-transform:uppercase}
-    .plan-name{font-family:"Space Grotesk";font-size:22px;font-weight:600}
-    .plan-price{font-family:"Space Grotesk";font-size:38px;font-weight:700;margin:14px 0 4px;letter-spacing:-.04em}
-    .plan-price span{font-size:14px;font-weight:400;color:var(--muted);letter-spacing:0}
-    .plan-desc{font-size:13px;color:var(--muted);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
-    .plan-features{display:grid;gap:10px;margin-bottom:28px;flex:1}
-    .plan-features li{list-style:none;font-size:13px;color:#b0bcc9;display:flex;gap:9px;align-items:flex-start}
-    .plan-features li::before{content:"✓";color:var(--blue2);font-weight:700;flex-shrink:0}
-    .plan .btn{width:100%;justify-content:center;margin-top:auto}
-    .plan-note{font-size:11px;color:var(--dim);text-align:center;margin-top:10px}
+    .pricing-cta{margin-top:0}
+    .pricing-cta-inner{display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;padding:48px 52px;border:1px solid rgba(108,221,255,.3);border-radius:var(--radius);background:linear-gradient(145deg,rgba(22,191,255,.06),rgba(22,191,255,.01))}
+    .pricing-cta-icon{font-size:28px;color:var(--blue2);margin-bottom:18px}
+    .pricing-cta-left h3{font-size:clamp(22px,3vw,30px);margin-bottom:12px}
+    .pricing-cta-left p{color:var(--muted);font-size:15px;max-width:520px}
+    .pricing-points{display:grid;gap:8px;margin-top:22px;list-style:none}
+    .pricing-points li{font-size:13px;color:#b0bcc9;display:flex;gap:9px;align-items:center}
+    .pricing-points li::before{content:"✓";color:var(--blue2);font-weight:700}
+    .pricing-cta-right{display:flex;flex-direction:column;align-items:center;gap:12px;flex-shrink:0}
+    .pricing-reply{font-size:11px;color:var(--dim);text-align:center}
 
     .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
     .tcard{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
@@ -751,6 +747,7 @@
       .mobile-nav .nav-cta{display:flex;margin-top:10px;text-align:center}
       .hero{padding:80px 0;min-height:auto}.section{padding:80px 0}.section-head{display:block}.section-head p{margin-top:18px}
       .services,.work-grid,.process,.pricing-grid,.testimonials-grid{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}
+      .pricing-cta-inner{grid-template-columns:1fr;gap:30px;padding:30px 24px}.pricing-cta-right{align-items:flex-start}
       .two{grid-template-columns:1fr}.float-card{right:5px}.browser-body{min-height:360px}.browser-heading{font-size:34px}
       footer{display:block}.footer-links{margin-top:9px}
     }
@@ -960,52 +957,23 @@
 
 <section class="section" id="pricing">
 <div class="wrap">
-  <div class="section-head"><div><div class="label">Investment</div><h2>Simple, transparent<br>pricing.</h2></div><p>No hidden fees, no retainer traps. Pick the package that fits your business and we'll build something that earns it back.</p></div>
-  <div class="pricing-grid">
-    <div class="plan fade-up">
-      <div class="plan-badge">Starter</div>
-      <div class="plan-name">Landing Page</div>
-      <div class="plan-price">$299 <span>/ one-time</span></div>
-      <div class="plan-desc">A focused single page built to convert — ideal for campaigns, new services or testing an idea.</div>
-      <ul class="plan-features">
-        <li>Single-page responsive design</li>
-        <li>Up to 5 sections</li>
-        <li>Contact form or CTA button</li>
-        <li>Mobile-first build</li>
-        <li>Delivered in 5–7 days</li>
-      </ul>
-      <a href="#contact" class="btn btn-secondary">Get started ↗</a>
-    </div>
-    <div class="plan featured fade-up">
-      <div class="plan-badge">Most popular</div>
-      <div class="plan-name">Business Website</div>
-      <div class="plan-price">$699 <span>/ one-time</span></div>
-      <div class="plan-desc">A complete multi-page website built around your brand, services and business goals.</div>
-      <ul class="plan-features">
-        <li>Up to 6 pages</li>
-        <li>Custom design & development</li>
-        <li>Mobile-first & fast-loading</li>
-        <li>Enquiry form setup</li>
-        <li>Domain & hosting guidance</li>
-        <li>Delivered in 10–14 days</li>
-      </ul>
-      <a href="#contact" class="btn btn-primary">Get started ↗</a>
-      <div class="plan-note">Most businesses choose this</div>
-    </div>
-    <div class="plan fade-up">
-      <div class="plan-badge">Premium</div>
-      <div class="plan-name">Full Presence</div>
-      <div class="plan-price">$1,199 <span>/ one-time</span></div>
-      <div class="plan-desc">For businesses that want a polished, high-impact online presence with ongoing support included.</div>
-      <ul class="plan-features">
-        <li>Everything in Business</li>
-        <li>Up to 10 pages</li>
-        <li>Brand direction & copywriting guidance</li>
-        <li>SEO foundations</li>
-        <li>3 months post-launch support</li>
-        <li>Priority turnaround</li>
-      </ul>
-      <a href="#contact" class="btn btn-secondary">Get started ↗</a>
+  <div class="section-head"><div><div class="label">Investment</div><h2>Pricing built around<br>your project.</h2></div><p>Every business is different. We scope each project individually so you only pay for what you actually need — no packages, no guesswork.</p></div>
+  <div class="pricing-cta">
+    <div class="pricing-cta-inner">
+      <div class="pricing-cta-left">
+        <div class="pricing-cta-icon">✦</div>
+        <h3>Let's talk about your project</h3>
+        <p>Tell us what you need and we'll come back with a clear scope and a fair price. No obligation, no sales pressure.</p>
+        <ul class="pricing-points">
+          <li>Quoted per project, not per hour</li>
+          <li>No hidden fees or ongoing retainers</li>
+          <li>Flexible for businesses in the US & India</li>
+        </ul>
+      </div>
+      <div class="pricing-cta-right">
+        <a href="#contact" class="btn btn-primary">Get a free quote ↗</a>
+        <span class="pricing-reply">We typically reply within 24 hours</span>
+      </div>
     </div>
   </div>
 </div>
@@ -1191,7 +1159,7 @@
 
   // Scroll-triggered fade-in
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-  document.querySelectorAll('.service,.project,.step,.principle,.tcard,.plan,.faq-item,.section-head,.why-copy,.manifesto').forEach(el=>{el.classList.add('fade-up');io.observe(el);});
+  document.querySelectorAll('.service,.project,.step,.principle,.tcard,.faq-item,.section-head,.why-copy,.manifesto,.pricing-cta-inner').forEach(el=>{el.classList.add('fade-up');io.observe(el);});
 
   // Active nav link on scroll
   const navLinks=document.querySelectorAll('.links a');
