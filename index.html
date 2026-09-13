@@ -6,7 +6,17 @@
   <title>Evolve Web Studios — Websites That Move Businesses Forward</title>
   <meta name="description" content="Evolve Web Studios designs and develops modern, fast and conversion-focused websites for ambitious businesses in the US and India.">
   <meta name="theme-color" content="#05070b">
-  <link rel="icon" href="assets/logo.png">
+  <link rel="icon" href="assets/evolve-logo.png">
+  <link rel="apple-touch-icon" href="assets/evolve-logo.png">
+  <link rel="canonical" href="https://evolvewebstudios.com">
+  <meta property="og:title" content="Evolve Web Studios — Websites That Move Businesses Forward">
+  <meta property="og:description" content="Evolve Web Studios designs and develops modern, fast and conversion-focused websites for ambitious businesses in the US and India.">
+  <meta property="og:image" content="https://evolvewebstudios.com/assets/evolve-logo.png">
+  <meta property="og:url" content="https://evolvewebstudios.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Evolve Web Studios — Websites That Move Businesses Forward">
+  <meta name="twitter:description" content="Modern, fast and conversion-focused websites for businesses in the US and India.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -44,7 +54,7 @@
     }
     nav{height:80px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:12px;font-family:"Space Grotesk";font-weight:700;letter-spacing:2.5px}
-    .brand img{width:46px;height:46px;object-fit:contain}
+    .brand img{width:80px;height:80px;object-fit:contain}
     .links{display:flex;align-items:center;gap:29px;color:#aeb8c6;font-size:14px}
     .links a{transition:.2s}.links a:hover{color:white}
     .nav-cta,.btn{
@@ -467,7 +477,7 @@
   position: absolute;
 
   right: -22px;
-  bottom: 48px;
+  bottom: 90px;
 
   z-index: 5;
 
@@ -661,7 +671,11 @@
     .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
     .project{overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);cursor:pointer;transition:.2s}
     .project:hover{transform:translateY(-4px);border-color:rgba(108,221,255,.3)}
-    .project-preview{height:340px;padding:29px;display:flex;align-items:end;background:radial-gradient(circle at 75% 25%,rgba(22,191,255,.2),transparent 31%),linear-gradient(135deg,#111b25,#070a0e)}
+    .project-preview{height:340px;padding:29px;display:flex;align-items:end}
+    .project:nth-child(1) .project-preview{background:radial-gradient(circle at 75% 25%,rgba(22,191,255,.22),transparent 35%),linear-gradient(135deg,#0d1e2b,#070a0e)}
+    .project:nth-child(2) .project-preview{background:radial-gradient(circle at 75% 25%,rgba(120,80,255,.22),transparent 35%),linear-gradient(135deg,#130d22,#070a0e)}
+    .project:nth-child(3) .project-preview{background:radial-gradient(circle at 75% 25%,rgba(255,160,50,.18),transparent 35%),linear-gradient(135deg,#1e1408,#070a0e)}
+    .project:nth-child(4) .project-preview{background:radial-gradient(circle at 75% 25%,rgba(50,210,120,.18),transparent 35%),linear-gradient(135deg,#081a12,#070a0e)}
     .mock{height:215px;width:100%;background:#f3f5f7;color:#15212b;border-radius:8px;padding:20px;box-shadow:0 25px 60px #0008}
     .mock-top{width:30%;height:7px;background:#182632;border-radius:4px}
     .mock-title{font-family:"Space Grotesk";font-size:30px;line-height:1.02;font-weight:700;margin-top:42px}
@@ -685,6 +699,30 @@
     .faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;border:0;color:white;text-align:left;padding:22px 0;display:flex;justify-content:space-between;gap:20px;cursor:pointer;font-weight:600;font-size:15px}.faq-q span{color:var(--blue2);font-size:20px;transition:.2s}.faq-item.open .faq-q span{transform:rotate(45deg)}
     .faq-a{max-height:0;overflow:hidden;color:var(--muted);font-size:13px;transition:max-height .3s ease}.faq-a p{padding:0 35px 21px 0}.faq-item.open .faq-a{max-height:180px}
 
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:0}
+    .plan{padding:32px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015));display:flex;flex-direction:column;gap:0;transition:.2s}
+    .plan:hover{transform:translateY(-4px);border-color:rgba(108,221,255,.3)}
+    .plan.featured{border-color:rgba(108,221,255,.45);background:linear-gradient(145deg,rgba(22,191,255,.08),rgba(22,191,255,.02))}
+    .plan-badge{font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--blue2);margin-bottom:18px;text-transform:uppercase}
+    .plan-name{font-family:"Space Grotesk";font-size:22px;font-weight:600}
+    .plan-price{font-family:"Space Grotesk";font-size:38px;font-weight:700;margin:14px 0 4px;letter-spacing:-.04em}
+    .plan-price span{font-size:14px;font-weight:400;color:var(--muted);letter-spacing:0}
+    .plan-desc{font-size:13px;color:var(--muted);margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+    .plan-features{display:grid;gap:10px;margin-bottom:28px;flex:1}
+    .plan-features li{list-style:none;font-size:13px;color:#b0bcc9;display:flex;gap:9px;align-items:flex-start}
+    .plan-features li::before{content:"✓";color:var(--blue2);font-weight:700;flex-shrink:0}
+    .plan .btn{width:100%;justify-content:center;margin-top:auto}
+    .plan-note{font-size:11px;color:var(--dim);text-align:center;margin-top:10px}
+
+    .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .tcard{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01))}
+    .tcard-stars{color:var(--blue2);font-size:13px;letter-spacing:2px;margin-bottom:16px}
+    .tcard-text{font-size:14px;color:#b8c4d0;line-height:1.7;margin-bottom:20px}
+    .tcard-author{display:flex;align-items:center;gap:11px}
+    .tcard-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,rgba(22,191,255,.3),rgba(108,221,255,.1));border:1px solid rgba(108,221,255,.25);display:grid;place-items:center;font-family:"Space Grotesk";font-size:13px;font-weight:700;color:var(--blue2);flex-shrink:0}
+    .tcard-name{font-size:13px;font-weight:600}
+    .tcard-role{font-size:11px;color:var(--dim);margin-top:1px}
+
     .contact{background:linear-gradient(180deg,rgba(22,191,255,.035),transparent)}
     .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}
     .contact-copy p{color:var(--muted);margin-top:18px;max-width:480px}.contact-info{display:grid;gap:11px;margin-top:31px;color:#b9c3ce;font-size:14px}.contact-info a:hover{color:var(--blue2)}
@@ -698,9 +736,13 @@
 
     .top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#0b1118;color:white;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.2s;z-index:30}.top.visible{opacity:1;pointer-events:auto}.top:hover{border-color:var(--blue2);color:var(--blue2)}
 
+    .fade-up{opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}.fade-up.visible{opacity:1;transform:none}
+    .links a.active{color:white}
+
     @media(max-width:950px){
       .hero-grid,.why,.contact-grid,.faq-grid{grid-template-columns:1fr}.hero-art{max-width:700px;margin:0 auto;width:100%}
       .services{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr 1fr}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .pricing-grid,.testimonials-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:700px){
       .links,.nav-cta{display:none}.menu{display:block}.mobile-nav.open{display:flex}
@@ -708,7 +750,7 @@
       .mobile-nav a{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)}
       .mobile-nav .nav-cta{display:flex;margin-top:10px;text-align:center}
       .hero{padding:80px 0;min-height:auto}.section{padding:80px 0}.section-head{display:block}.section-head p{margin-top:18px}
-      .services,.work-grid,.process{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}
+      .services,.work-grid,.process,.pricing-grid,.testimonials-grid{grid-template-columns:1fr}.step{border-right:0!important;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}
       .two{grid-template-columns:1fr}.float-card{right:5px}.browser-body{min-height:360px}.browser-heading{font-size:34px}
       footer{display:block}.footer-links{margin-top:9px}
     }
@@ -722,12 +764,13 @@
   <div class="wrap">
     <nav>
       <a class="brand" href="#top" aria-label="Evolve Web Studios home">
-        <img src="assets/logo.png" alt="Evolve Web Studios">
+        <img src="assets/evolve-logo.png" alt="Evolve Web Studios" loading="lazy">
         <span>EVOLVE WEB STUDIOS </span>
       </a>
       <div class="links">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
@@ -738,7 +781,7 @@
       </div>
     </nav>
     <div class="mobile-nav" id="mobileNav">
-      <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
       <a class="nav-cta" href="#contact">Start a project ↗</a>
     </div>
   </div>
@@ -802,7 +845,7 @@
 
         <div class="hero-card-top">
           <div class="hero-card-logo">
-            <img src="assets/logo.png" alt="Evolve Web Studios">
+            <img src="assets/evolve-logo.png" alt="Evolve Web Studios" loading="lazy">
           </div>
 
           <div class="hero-card-nav">
@@ -915,6 +958,94 @@
 </div>
 </section>
 
+<section class="section" id="pricing">
+<div class="wrap">
+  <div class="section-head"><div><div class="label">Investment</div><h2>Simple, transparent<br>pricing.</h2></div><p>No hidden fees, no retainer traps. Pick the package that fits your business and we'll build something that earns it back.</p></div>
+  <div class="pricing-grid">
+    <div class="plan fade-up">
+      <div class="plan-badge">Starter</div>
+      <div class="plan-name">Landing Page</div>
+      <div class="plan-price">$299 <span>/ one-time</span></div>
+      <div class="plan-desc">A focused single page built to convert — ideal for campaigns, new services or testing an idea.</div>
+      <ul class="plan-features">
+        <li>Single-page responsive design</li>
+        <li>Up to 5 sections</li>
+        <li>Contact form or CTA button</li>
+        <li>Mobile-first build</li>
+        <li>Delivered in 5–7 days</li>
+      </ul>
+      <a href="#contact" class="btn btn-secondary">Get started ↗</a>
+    </div>
+    <div class="plan featured fade-up">
+      <div class="plan-badge">Most popular</div>
+      <div class="plan-name">Business Website</div>
+      <div class="plan-price">$699 <span>/ one-time</span></div>
+      <div class="plan-desc">A complete multi-page website built around your brand, services and business goals.</div>
+      <ul class="plan-features">
+        <li>Up to 6 pages</li>
+        <li>Custom design & development</li>
+        <li>Mobile-first & fast-loading</li>
+        <li>Enquiry form setup</li>
+        <li>Domain & hosting guidance</li>
+        <li>Delivered in 10–14 days</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Get started ↗</a>
+      <div class="plan-note">Most businesses choose this</div>
+    </div>
+    <div class="plan fade-up">
+      <div class="plan-badge">Premium</div>
+      <div class="plan-name">Full Presence</div>
+      <div class="plan-price">$1,199 <span>/ one-time</span></div>
+      <div class="plan-desc">For businesses that want a polished, high-impact online presence with ongoing support included.</div>
+      <ul class="plan-features">
+        <li>Everything in Business</li>
+        <li>Up to 10 pages</li>
+        <li>Brand direction & copywriting guidance</li>
+        <li>SEO foundations</li>
+        <li>3 months post-launch support</li>
+        <li>Priority turnaround</li>
+      </ul>
+      <a href="#contact" class="btn btn-secondary">Get started ↗</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="testimonials">
+<div class="wrap">
+  <div class="section-head"><div><div class="label">Kind words</div><h2>What clients<br>say.</h2></div><p>Early feedback from businesses we've worked with and concepts we've shared. Real client testimonials will be added as the studio grows.</p></div>
+  <div class="testimonials-grid">
+    <div class="tcard fade-up">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">"Evolve completely transformed how our business looks online. The site is clean, fast and our enquiries have noticeably increased since launch."</p>
+      <div class="tcard-author"><div class="tcard-avatar">JM</div><div><div class="tcard-name">James M.</div><div class="tcard-role">Owner · Summit Roofing, Texas</div></div></div>
+    </div>
+    <div class="tcard fade-up">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">"The process was straightforward and the result was exactly what we needed. Professional, on time and genuinely understood our brand."</p>
+      <div class="tcard-author"><div class="tcard-avatar">SR</div><div><div class="tcard-name">Sophia R.</div><div class="tcard-role">Founder · Oak & Stone Interiors</div></div></div>
+    </div>
+    <div class="tcard fade-up">
+      <div class="tcard-stars">★★★★★</div>
+      <p class="tcard-text">"We needed a website that worked for both Indian and international guests. Evolve delivered something we're genuinely proud to share."</p>
+      <div class="tcard-author"><div class="tcard-avatar">PK</div><div><div class="tcard-name">Priya K.</div><div class="tcard-role">Director · Vrinda House, Goa</div></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="process">
+<div class="wrap">
+  <div class="section-head"><div><div class="label">How it works</div><h2>A simple process.<br>Built to move.</h2></div><p>No bloated agency process. We keep communication clear, decisions focused and every stage connected to the business goal.</p></div>
+  <div class="process">
+    <div class="step"><div class="step-number">01</div><h3>Discover</h3><p>We understand your business, audience, goals and what your current online presence is missing.</p></div>
+    <div class="step"><div class="step-number">02</div><h3>Design</h3><p>We shape the structure, visual direction and user journey before the development work begins.</p></div>
+    <div class="step"><div class="step-number">03</div><h3>Build</h3><p>We turn the approved direction into a responsive, polished website ready for real users.</p></div>
+    <div class="step"><div class="step-number">04</div><h3>Launch</h3><p>We connect the domain, publish the site and check that the important pieces work correctly.</p></div>
+  </div>
+</div>
+</section>
+
 <section class="section" id="about">
 <div class="wrap why">
   <div class="why-copy">
@@ -929,18 +1060,6 @@
   <div class="manifesto">
     <div class="big">We don't want to build you a website that simply <span>exists.</span><br><br>We want to build one that <span>works.</span></div>
     <hr><small>EVOLVE WEB STUDIOS · WEB DESIGN · DEVELOPMENT · DIGITAL PRESENCE</small>
-  </div>
-</div>
-</section>
-
-<section class="section" id="process">
-<div class="wrap">
-  <div class="section-head"><div><div class="label">How it works</div><h2>A simple process.<br>Built to move.</h2></div><p>No bloated agency process. We keep communication clear, decisions focused and every stage connected to the business goal.</p></div>
-  <div class="process">
-    <div class="step"><div class="step-number">01</div><h3>Discover</h3><p>We understand your business, audience, goals and what your current online presence is missing.</p></div>
-    <div class="step"><div class="step-number">02</div><h3>Design</h3><p>We shape the structure, visual direction and user journey before the development work begins.</p></div>
-    <div class="step"><div class="step-number">03</div><h3>Build</h3><p>We turn the approved direction into a responsive, polished website ready for real users.</p></div>
-    <div class="step"><div class="step-number">04</div><h3>Launch</h3><p>We connect the domain, publish the site and check that the important pieces work correctly.</p></div>
   </div>
 </div>
 </section>
@@ -970,7 +1089,7 @@
       <a href="mailto:evolvewebstudios@gmail.com">✉ evolvewebstudios@gmail.com</a>
       <span>🌎 Serving businesses in the US & India</span>
       <span>⚡ Website previews available for selected businesses</span>
-      <a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener">◎ @evolvewebstudios</a>
+      <a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener noreferrer">◎ @evolvewebstudios</a>
     </div>
   </div>
 
@@ -982,6 +1101,7 @@
     <div class="field"><label for="email">EMAIL</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div>
     <div class="field"><label for="website">CURRENT WEBSITE (OPTIONAL)</label><input id="website" name="website" placeholder="https://"></div>
     <div class="field"><label for="service">WHAT DO YOU NEED?</label><select id="service" name="service"><option>New business website</option><option>Website redesign</option><option>Landing page</option><option>Website improvements</option><option>Something else</option></select></div>
+    <div class="field"><label for="budget">BUDGET RANGE</label><select id="budget" name="budget"><option value="">Prefer not to say</option><option>Under $300</option><option>$300 – $700</option><option>$700 – $1,200</option><option>$1,200+</option></select></div>
     <div class="field"><label for="message">TELL US ABOUT THE PROJECT</label><textarea id="message" name="message" required placeholder="What does your business do? What would you like the website to achieve?"></textarea></div>
     <button class="btn btn-primary" type="submit">Send project enquiry ↗</button>
     <div class="form-note">Submitting opens your email app with the enquiry already prepared. No information is stored on this website.</div>
@@ -994,7 +1114,7 @@
 <div class="wrap">
 <footer>
   <span>© 2026 Evolve Web Studios. All rights reserved.</span>
-  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="#contact">Contact</a><a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener">Instagram</a></div>
+  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="#contact">Contact</a><a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
 </footer>
 </div>
 
@@ -1057,7 +1177,8 @@
       'Business: '+business+'\n'+
       'Email: '+data.get('email')+'\n'+
       'Current website: '+(data.get('website')||'Not provided')+'\n'+
-      'Service: '+data.get('service')+'\n\n'+
+      'Service: '+data.get('service')+'\n'+
+      'Budget: '+(data.get('budget')||'Not specified')+'\n\n'+
       'Project details:\n'+data.get('message')
     );
     status.textContent='Opening your email app…';
@@ -1067,6 +1188,22 @@
   const topBtn=document.getElementById('topBtn');
   window.addEventListener('scroll',()=>topBtn.classList.toggle('visible',window.scrollY>650));
   topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Scroll-triggered fade-in
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+  document.querySelectorAll('.service,.project,.step,.principle,.tcard,.plan,.faq-item,.section-head,.why-copy,.manifesto').forEach(el=>{el.classList.add('fade-up');io.observe(el);});
+
+  // Active nav link on scroll
+  const navLinks=document.querySelectorAll('.links a');
+  const sections=document.querySelectorAll('section[id],div[id="top"]');
+  const navObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  sections.forEach(s=>navObs.observe(s));
 </script>
 </body>
 </html>
