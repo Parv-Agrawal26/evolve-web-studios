@@ -6,17 +6,39 @@
   <title>Evolve Web Studios — Websites That Move Businesses Forward</title>
   <meta name="description" content="Evolve Web Studios designs and develops modern, fast and conversion-focused websites for ambitious businesses in the US and India.">
   <meta name="theme-color" content="#05070b">
-  <link rel="icon" href="assets/evolve-logo.png">
-  <link rel="apple-touch-icon" href="assets/evolve-logo.png">
-  <link rel="canonical" href="https://evolvewebstudios.com">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="canonical" href="https://evolvewebstudios.in">
   <meta property="og:title" content="Evolve Web Studios — Websites That Move Businesses Forward">
   <meta property="og:description" content="Evolve Web Studios designs and develops modern, fast and conversion-focused websites for ambitious businesses in the US and India.">
-  <meta property="og:image" content="https://evolvewebstudios.com/assets/evolve-logo.png">
-  <meta property="og:url" content="https://evolvewebstudios.com">
+  <meta property="og:image" content="https://evolvewebstudios.in/assets/evolve-logo.png">
+  <meta property="og:url" content="https://evolvewebstudios.in">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Evolve Web Studios — Websites That Move Businesses Forward">
   <meta name="twitter:description" content="Modern, fast and conversion-focused websites for businesses in the US and India.">
+  <meta name="twitter:image" content="https://evolvewebstudios.in/assets/evolve-logo.png">
+  <meta name="twitter:site" content="@evolvewebstudios">
+  <meta name="author" content="Evolve Web Studios">
+  <meta name="geo.region" content="IN">
+  <meta name="geo.placename" content="India">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Evolve Web Studios",
+    "url": "https://evolvewebstudios.in",
+    "logo": "https://evolvewebstudios.in/assets/evolve-logo.png",
+    "description": "Evolve Web Studios designs and develops modern, fast and conversion-focused websites for ambitious businesses in the US and India.",
+    "email": "evolvewebstudios@gmail.com",
+    "areaServed": ["US", "IN"],
+    "sameAs": ["https://www.instagram.com/evolvewebstudios/"],
+    "serviceType": ["Web Design", "Web Development", "Website Redesign", "Landing Pages"]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -539,8 +561,8 @@
 .hero-number {
   position: absolute;
 
-  left: 0;
-  bottom: 25px;
+  left: 10;
+  bottom: -50px;
 
   display: flex;
   align-items: center;
@@ -755,8 +777,8 @@
       background:
         repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(108,221,255,.028) 60px),
         repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(108,221,255,.028) 60px);
-      transform-style:preserve-3d;
-      animation:meshDrift 18s linear infinite;
+      transform-style:flat;
+      animation:none;
     }
     @keyframes meshDrift{
       0%{background-position:0 0,0 0}
@@ -764,7 +786,7 @@
     }
     /* floating 3D ring — uses hero-orbit elements */
     .hero-orbit{
-      animation:orbitSpin 14s linear infinite;
+      animation:none;
       transform-style:preserve-3d;
     }
     .orbit-2{animation-duration:9s;animation-direction:reverse}
@@ -774,7 +796,7 @@
     }
     /* hero-visual gets 3D preserve */
     .hero-visual{
-      transform-style:preserve-3d;
+      transform-style:flat;
     }
     /* hero card 3D lift on hover */
     .hero-card{
@@ -807,7 +829,7 @@
       transform-origin:50% 100%;
       mask-image:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 100%);
       -webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.5) 0%,transparent 100%);
-      animation:gridScroll 6s linear infinite;
+      animation:none;
     }
     @keyframes gridScroll{
       0%{background-position:0 0,0 0}
@@ -925,7 +947,7 @@
     }
     /* dot pulse */
     .dot{
-      animation:dotPulse 2.5s ease-in-out infinite;
+      animation:none;
     }
     @keyframes dotPulse{
       0%,100%{box-shadow:0 0 8px var(--blue),0 0 18px var(--blue)}
@@ -938,6 +960,7 @@
       -webkit-backdrop-filter:blur(14px);
       border:1px solid rgba(108,221,255,.35);
       box-shadow:0 20px 50px rgba(0,0,0,.5),0 0 25px rgba(22,191,255,.1);
+      animation:none;
     }
 
     @media(max-width:950px){
@@ -966,7 +989,7 @@
   <div class="wrap">
     <nav>
       <a class="brand" href="#top" aria-label="Evolve Web Studios home">
-        <img src="assets/evolve-logo.png" alt="Evolve Web Studios" loading="lazy">
+        <img src="assets/evolve-logo-tnsp.png" alt="Evolve Web Studios" loading="eager">
         <span>EVOLVE WEB STUDIOS </span>
       </a>
       <div class="links">
@@ -1047,7 +1070,7 @@
 
         <div class="hero-card-top">
           <div class="hero-card-logo">
-            <img src="assets/evolve-logo.png" alt="Evolve Web Studios" loading="lazy">
+            <img src="assets/evolve-logo-tnsp.png" alt="Evolve Web Studios" loading="lazy">
           </div>
 
           <div class="hero-card-nav">
@@ -1287,7 +1310,7 @@
 <div class="wrap">
 <footer>
   <span>© 2026 Evolve Web Studios. All rights reserved.</span>
-  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="#contact">Contact</a><a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+  <div class="footer-links"><a href="#top">Back to top ↑</a><a href="#contact">Contact</a><a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener noreferrer" aria-label="Evolve Web Studios on Instagram">Instagram</a></div>
 </footer>
 </div>
 
