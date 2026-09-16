@@ -759,7 +759,9 @@
     .quote-fab:hover::after{opacity:1}
 
 
-    .fade-up{opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}.fade-up.visible{opacity:1;transform:none}
+    .cursor-glow{position:fixed;width:320px;height:320px;border-radius:50%;pointer-events:none;z-index:0;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(22,191,255,.07) 0%,transparent 70%);transition:transform .08s linear;}
+    .mobile-ticker{display:none;}
+    .scroll-bar{position:fixed;top:0;left:0;height:2px;width:0%;background:linear-gradient(90deg,var(--blue),var(--blue2));z-index:999;transition:width .1s linear;}
     .links a.active{color:white}
 
     .side-ticker{
@@ -785,29 +787,16 @@
       0%{transform:translateY(0)}
       100%{transform:translateY(-50%)}
     }
+    @keyframes tickerScrollH{
+      0%{transform:translateX(0)}
+      100%{transform:translateX(-50%)}
+    }
     @media(max-width:700px){
-      .side-ticker{
-        position:fixed;left:0;right:0;top:80px;bottom:auto;width:100%;height:34px;
-        flex-direction:row;
-      }
-      .side-ticker-inner{
-        flex-direction:row;
-        animation:tickerScrollH 20s linear infinite;
-      }
-      .side-ticker-inner span{
-        writing-mode:horizontal-tb;transform:none;
-        padding:0 18px;
-        font-size:10px;
-        line-height:34px;
-      }
-      .side-ticker-inner span.sep{
-        padding:0 6px;
-        line-height:34px;
-      }
-      @keyframes tickerScrollH{
-        0%{transform:translateX(0)}
-        100%{transform:translateX(-50%)}
-      }
+      .side-ticker{display:none;}
+      .mobile-ticker{display:block;width:100%;height:34px;overflow:hidden;background:rgba(5,7,11,.9);border-bottom:1px solid var(--line);}
+      .mobile-ticker-inner{display:flex;width:max-content;animation:tickerScrollH 20s linear infinite;}
+      .mobile-ticker-inner span{white-space:nowrap;padding:0 18px;font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(108,221,255,.45);text-transform:uppercase;line-height:34px;}
+      .mobile-ticker-inner span.sep{padding:0 6px;line-height:34px;color:rgba(108,221,255,.2);}
     }
 
     /* =========================================
@@ -1082,6 +1071,23 @@
   </div>
 </header>
 
+<div class="mobile-ticker" aria-hidden="true">
+  <div class="mobile-ticker-inner">
+    <span>Cheapest in market</span><span class="sep">✦</span>
+    <span>Best quality guaranteed</span><span class="sep">✦</span>
+    <span>Fast delivery</span><span class="sep">✦</span>
+    <span>Results-driven design</span><span class="sep">✦</span>
+    <span>No compromise on quality</span><span class="sep">✦</span>
+    <span>Built to convert</span><span class="sep">✦</span>
+    <span>Cheapest in market</span><span class="sep">✦</span>
+    <span>Best quality guaranteed</span><span class="sep">✦</span>
+    <span>Fast delivery</span><span class="sep">✦</span>
+    <span>Results-driven design</span><span class="sep">✦</span>
+    <span>No compromise on quality</span><span class="sep">✦</span>
+    <span>Built to convert</span><span class="sep">✦</span>
+  </div>
+</div>
+
 <main id="main">
 <section class="hero" id="top">
   <div class="wrap hero-grid">
@@ -1125,6 +1131,8 @@
         &nbsp; · &nbsp;
         <strong>BRANDING</strong>
       </div>
+
+      <div style="margin-top:16px;font-size:11px;color:#4a5a6a;letter-spacing:1.2px;">🇮🇳 Based in India, built for the world.</div>
 
     </div>
 
@@ -1455,6 +1463,22 @@
   const topBtn=document.getElementById('topBtn');
   window.addEventListener('scroll',()=>topBtn.classList.toggle('visible',window.scrollY>650));
   topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  const glow=document.createElement('div');
+  glow.className='cursor-glow';
+  document.body.appendChild(glow);
+  document.addEventListener('mousemove',e=>{
+    glow.style.left=e.clientX+'px';
+    glow.style.top=e.clientY+'px';
+  });
+
+  const bar=document.createElement('div');
+  bar.className='scroll-bar';
+  document.body.appendChild(bar);
+  window.addEventListener('scroll',()=>{
+    const pct=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;
+    bar.style.width=pct+'%';
+  });
 
   // Scroll-triggered fade-in
   const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
