@@ -753,9 +753,62 @@
     .modal-box{width:min(670px,95vw);background:#0b1119;border:1px solid rgba(108,221,255,.25);border-radius:15px;padding:34px;position:relative}.modal-close{position:absolute;right:15px;top:10px;border:0;background:none;color:#9aa6b6;font-size:29px;cursor:pointer}.modal-box h3{font-size:31px}.modal-box p{color:var(--muted);margin-top:13px}.modal-box .actions{margin-top:24px}
 
     .top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#0b1118;color:white;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.2s;z-index:30}.top.visible{opacity:1;pointer-events:auto}.top:hover{border-color:var(--blue2);color:var(--blue2)}
+    .quote-fab{position:fixed;right:22px;bottom:74px;z-index:30;width:42px;height:42px;border-radius:50%;background:var(--blue);color:#05070b;font-size:16px;display:grid;place-items:center;box-shadow:0 8px 30px rgba(22,191,255,.35);transition:transform .2s,box-shadow .2s}
+    .quote-fab:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(22,191,255,.5)}
+    .quote-fab::after{content:'Get a free quote';position:absolute;right:52px;background:#0b1118;color:#fff;font-size:11px;font-weight:700;white-space:nowrap;padding:6px 10px;border-radius:7px;border:1px solid var(--line);opacity:0;pointer-events:none;transition:opacity .2s}
+    .quote-fab:hover::after{opacity:1}
+
 
     .fade-up{opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}.fade-up.visible{opacity:1;transform:none}
     .links a.active{color:white}
+
+    .side-ticker{
+      position:fixed;left:0;top:0;bottom:0;width:38px;
+      z-index:40;display:flex;align-items:center;justify-content:center;
+      pointer-events:none;overflow:hidden;
+    }
+    .side-ticker-inner{
+      display:flex;flex-direction:column;
+      animation:tickerScroll 20s linear infinite;
+      white-space:nowrap;
+    }
+    .side-ticker-inner span{
+      writing-mode:vertical-rl;transform:rotate(180deg);
+      font-size:11px;font-weight:700;letter-spacing:3px;
+      color:rgba(108,221,255,.45);text-transform:uppercase;
+      padding:18px 0;
+    }
+    .side-ticker-inner span.sep{
+      color:rgba(108,221,255,.2);letter-spacing:0;padding:8px 0;font-size:14px;
+    }
+    @keyframes tickerScroll{
+      0%{transform:translateY(0)}
+      100%{transform:translateY(-50%)}
+    }
+    @media(max-width:700px){
+      .side-ticker{
+        position:fixed;left:0;right:0;top:80px;bottom:auto;width:100%;height:34px;
+        flex-direction:row;
+      }
+      .side-ticker-inner{
+        flex-direction:row;
+        animation:tickerScrollH 20s linear infinite;
+      }
+      .side-ticker-inner span{
+        writing-mode:horizontal-tb;transform:none;
+        padding:0 18px;
+        font-size:10px;
+        line-height:34px;
+      }
+      .side-ticker-inner span.sep{
+        padding:0 6px;
+        line-height:34px;
+      }
+      @keyframes tickerScrollH{
+        0%{transform:translateX(0)}
+        100%{transform:translateX(-50%)}
+      }
+    }
 
     /* =========================================
        3D & IMMERSIVE UPGRADES
@@ -985,6 +1038,23 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="side-ticker" aria-hidden="true">
+  <div class="side-ticker-inner">
+    <span>Cheapest in market</span><span class="sep">✦</span>
+    <span>Best quality guaranteed</span><span class="sep">✦</span>
+    <span>Fast delivery</span><span class="sep">✦</span>
+    <span>Results-driven design</span><span class="sep">✦</span>
+    <span>No compromise on quality</span><span class="sep">✦</span>
+    <span>Built to convert</span><span class="sep">✦</span>
+    <span>Cheapest in market</span><span class="sep">✦</span>
+    <span>Best quality guaranteed</span><span class="sep">✦</span>
+    <span>Fast delivery</span><span class="sep">✦</span>
+    <span>Results-driven design</span><span class="sep">✦</span>
+    <span>No compromise on quality</span><span class="sep">✦</span>
+    <span>Built to convert</span><span class="sep">✦</span>
+  </div>
+</div>
+
 <header>
   <div class="wrap">
     <nav>
@@ -1195,7 +1265,7 @@
         <ul class="pricing-points">
           <li>Quoted per project, not per hour</li>
           <li>No hidden fees or ongoing retainers</li>
-          <li>Flexible for businesses in the US & India</li>
+          <li>Flexible for businesses in the 🇺🇸 US & 🇮🇳 India</li>
         </ul>
       </div>
       <div class="pricing-cta-right">
@@ -1265,10 +1335,10 @@
   <div class="faq-grid">
     <div class="faq-intro"><div class="label">Questions</div><h2>Let's make it<br>simple.</h2><p>Here are the answers to the questions businesses usually have before starting a website project.</p></div>
     <div class="faq">
-      <div class="faq-item"><button class="faq-q">How long does a typical project take?<span>+</span></button><div class="faq-a"><p>Landing pages can usually be completed quickly, while full business websites take longer depending on scope, content and feedback.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How long does a typical project take?<span>+</span></button><div class="faq-a"><p>Landing pages are typically delivered in 5–7 days. Full business websites take 2–4 weeks depending on scope, content and feedback rounds. We'll give you a clear timeline before we start.</p></div></div>
       <div class="faq-item"><button class="faq-q">What do you need from me to get started?<span>+</span></button><div class="faq-a"><p>Usually a short overview of your business, goals, services, branding and any content or examples you already have. If you're starting from scratch, we can structure the project with you.</p></div></div>
       <div class="faq-item"><button class="faq-q">Can you redesign my existing website?<span>+</span></button><div class="faq-a"><p>Yes. A redesign can improve the visual quality, mobile experience, structure and calls-to-action while keeping the useful information you already have.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Do you work with businesses in the USA?<span>+</span></button><div class="faq-a"><p>Yes. Evolve is positioned to work with businesses in both the US and India, with communication handled remotely through email and scheduled calls.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Do you work with businesses in the USA?<span>+</span></button><div class="faq-a"><p>Yes. We work with businesses in both the 🇺🇸 US and 🇮🇳 India, with communication handled remotely through email and scheduled calls.</p></div></div>
       <div class="faq-item"><button class="faq-q">Do you provide support after launch?<span>+</span></button><div class="faq-a"><p>Yes. We can help with post-launch updates, content changes and future improvements when you need them.</p></div></div>
     </div>
   </div>
@@ -1283,7 +1353,7 @@
     <p>Tell us about your business and what you want your website to achieve. We'll take a look and get back to you.</p>
     <div class="contact-info">
       <a href="mailto:evolvewebstudios@gmail.com">✉ evolvewebstudios@gmail.com</a>
-      <span>🌎 Serving businesses in the US & India</span>
+      <span>🌎 Serving businesses in the 🇺🇸 US & 🇮🇳 India</span>
       <span>⚡ Website previews available for selected businesses</span>
       <a href="https://www.instagram.com/evolvewebstudios/" target="_blank" rel="noopener noreferrer">◎ @evolvewebstudios</a>
     </div>
@@ -1314,6 +1384,7 @@
 </footer>
 </div>
 
+<a class="quote-fab" href="#contact" aria-label="Get a free quote">✦</a>
 <button class="top" id="topBtn" aria-label="Back to top">↑</button>
 
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
