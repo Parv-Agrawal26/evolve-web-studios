@@ -656,7 +656,7 @@
 
   .hero-floating-card {
     right: -5px;
-    bottom: 20px;
+    bottom: 100px;
   }
 
   .hero-number {
@@ -1084,6 +1084,54 @@
   </div>
 </div>
 
+<style>
+  .hero-video-container {
+    position: relative;
+    width: 100%;
+    /* Mobile / Small Screens: Maintain natural 16:9 ratio so sides aren't cut */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+  }
+
+  /* Desktop / Larger Screens: Fill space down to the bottom of screen */
+  @media (min-width: 768px) {
+    .hero-video-container {
+      aspect-ratio: unset;
+      height: calc(100vh - 80px);
+      height: calc(100dvh - 80px);
+      min-height: 450px;
+      max-height: 1000px;
+    }
+  }
+
+  .hero-video-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+</style>
+
+<div class="hero-video-container">
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    aria-hidden="true"
+    tabindex="-1"
+    class="hero-video-element">
+    <source src="https://github.com/Parv-Agrawal26/evolve-web-studios/releases/download/v1.0.0/logo.vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
 <main id="main">
 <section class="hero" id="top">
   <div class="wrap hero-grid">
@@ -1352,7 +1400,7 @@
       <div class="tcard-stars">★★★★★</div>
       <p class="tcard-text">"Very helpful people, others try to charge too much by adding small small features but they genuinely helped me and properly understood my requirement</p>
       <div class="tcard-author"><div class="tcard-avatar">SA</div><div><div class="tcard-name">Shreya Aggarwal</div><div class="tcard-role">Co-Founder · The Monk Store, IN
-        
+
       </div></div></div>
     </div>
     <div class="tcard fade-up">
